@@ -539,4 +539,11 @@
         </notificationChannels>
         <notificationType>ya_contract_renewal_notify</notificationType>
     </notificationTypeSettings>
+    <notificationTypeSettings>
+        <notificationChannels>
+            <desktopEnabled>true</desktopEnabled>
+            <mobileEnabled>true</mobileEnabled>
+        </notificationChannels>
+        <notificationType>Statement_Ready</notificationType>
+    </notificationTypeSettings>
 </NotificationTypeConfig>

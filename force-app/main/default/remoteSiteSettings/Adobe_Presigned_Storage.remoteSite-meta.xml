@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Presigned cloud-storage host Adobe PDF Services returns for template upload and document download. Not covered by the named credential because the host is not pdf-services.adobe.io.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://dcplatformstorageservice-prod-us-east-1.s3-accelerate.amazonaws.com</url>
+</RemoteSiteSetting>

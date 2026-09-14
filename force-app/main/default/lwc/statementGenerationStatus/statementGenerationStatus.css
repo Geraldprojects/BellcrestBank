@@ -1,0 +1,125 @@
+.placeholder {
+    min-height: 3rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.status-badge_queued {
+    background: #706e6b;
+}
+
+.status-badge_generating {
+    background: #0176d3;
+}
+
+.status-badge_ready {
+    background: #2e844a;
+}
+
+.status-badge_issued {
+    background: #1b96ff;
+}
+
+.status-badge_failed {
+    background: #ba0517;
+}
+
+/* Turns the sync glyph while a cycle is still working, so the tile reads as live rather than stale. */
+.status-icon_spinning {
+    animation: status-spin 1.6s linear infinite;
+}
+
+@keyframes status-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .status-icon_spinning {
+        animation: none;
+    }
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1.25rem;
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+}
+
+.detail-grid dt {
+    color: #5c5c5c;
+}
+
+.detail-grid dd {
+    margin: 0;
+    color: #181818;
+}
+
+.failure-detail {
+    margin-top: 1rem;
+    padding: 0.6rem 0.75rem;
+    border-left: 3px solid #ba0517;
+    background: #feded8;
+    border-radius: 0.15rem;
+}
+
+.failure-detail__message {
+    font-size: 0.8125rem;
+    color: #8e030f;
+    word-break: break-word;
+}
+
+.failure-detail__retries {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #a4090a;
+}
+
+.document-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 0;
+    color: #5c5c5c;
+    font-size: 0.8125rem;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+.live-warning {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.15rem;
+    background: #fef6e6;
+    color: #8c4b02;
+    font-size: 0.75rem;
+}

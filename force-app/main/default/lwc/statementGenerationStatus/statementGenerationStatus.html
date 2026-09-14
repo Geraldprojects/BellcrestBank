@@ -1,0 +1,110 @@
+<template>
+    <lightning-card title="Statement Generation" icon-name="standard:document">
+        <lightning-button-icon
+                slot="actions"
+                icon-name="utility:refresh"
+                variant="border-filled"
+                alternative-text="Refresh status"
+                title="Refresh status"
+                onclick={handleRefresh}>
+        </lightning-button-icon>
+
+        <div class="slds-var-p-horizontal_medium slds-var-p-bottom_medium">
+
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading statement status" size="small"></lightning-spinner>
+                <div class="placeholder"></div>
+            </template>
+
+            <template lwc:elseif={error}>
+                <div class="slds-text-color_error">{error}</div>
+            </template>
+
+            <template lwc:elseif={showEmptyState}>
+                <div class="empty-state">
+                    <lightning-icon icon-name="utility:page" size="small" variant="inverse"></lightning-icon>
+                    <p>No statement has been created for this household yet.</p>
+                </div>
+            </template>
+
+            <template lwc:elseif={hasCycle}>
+                <div class={badgeClass}>
+                    <lightning-icon
+                            class={iconClass}
+                            icon-name={presentation.icon}
+                            size="x-small"
+                            variant="inverse">
+                    </lightning-icon>
+                    <span>{presentation.label}</span>
+                </div>
+
+                <dl class="detail-grid">
+                    <dt>Cycle</dt>
+                    <dd>
+                        <lightning-formatted-date-time
+                                value={cycle.periodStart}
+                                day="2-digit" month="short" year="numeric">
+                        </lightning-formatted-date-time>
+                        &nbsp;&ndash;&nbsp;
+                        <lightning-formatted-date-time
+                                value={cycle.periodEnd}
+                                day="2-digit" month="short" year="numeric">
+                        </lightning-formatted-date-time>
+                    </dd>
+
+                    <dt>Accounts</dt>
+                    <dd>{accountText}</dd>
+
+                    <dt>Balance</dt>
+                    <dd>
+                        <lightning-formatted-number
+                                value={cycle.totalBalance}
+                                format-style="currency"
+                                currency-code="ZAR">
+                        </lightning-formatted-number>
+                    </dd>
+
+                    <dt>Fees</dt>
+                    <dd>
+                        <lightning-formatted-number
+                                value={cycle.totalFees}
+                                format-style="currency"
+                                currency-code="ZAR">
+                        </lightning-formatted-number>
+                    </dd>
+
+                    <dt>Updated</dt>
+                    <dd>
+                        <lightning-formatted-date-time
+                                value={cycle.lastUpdated}
+                                day="2-digit" month="short" hour="2-digit" minute="2-digit">
+                        </lightning-formatted-date-time>
+                    </dd>
+                </dl>
+
+                <template lwc:if={isFailed}>
+                    <div class="failure-detail">
+                        <p class="failure-detail__message">{cycle.errorDetail}</p>
+                        <template lwc:if={hasRetries}>
+                            <p class="failure-detail__retries">{retryText}</p>
+                        </template>
+                    </div>
+                </template>
+
+                <template lwc:if={hasDocument}>
+                    <a href={cycle.documentUrl} target="_blank" rel="noopener" class="document-link">
+                        <lightning-icon icon-name="doctype:pdf" size="x-small"></lightning-icon>
+                        <span>View statement</span>
+                    </a>
+                </template>
+            </template>
+
+            <template lwc:if={liveUpdatesDown}>
+                <div class="live-warning">
+                    <lightning-icon icon-name="utility:warning" size="xx-small"></lightning-icon>
+                    <span>Live updates unavailable &mdash; refresh to see the latest status.</span>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
