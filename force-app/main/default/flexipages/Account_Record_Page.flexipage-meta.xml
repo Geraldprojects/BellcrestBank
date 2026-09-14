@@ -241,6 +241,19 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>statementGenerationStatus</componentName>
+                <identifier>c_statementGenerationStatus</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Household</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>label</name>
                     <value>Tabs</value>
