@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>Attach an uploaded document to a document checklist item record.</description>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;DocumentUploadInfo&quot; : [ {
+    &quot;UploadedDocuments&quot; : 3,
+    &quot;ExistingDocumentList&quot; : [ {
+      &quot;DocumentTypeId&quot; : &quot;&quot;,
+      &quot;RelatedApplicantId&quot; : &quot;&quot;,
+      &quot;DocumentType&quot; : &quot;&quot;,
+      &quot;DocumentChecklistId&quot; : &quot;&quot;,
+      &quot;RelatedContentDocumentId&quot; : &quot;&quot;
+    } ]
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+    <nullInputsIncludedInOutput>true</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9cb53507-2bba-4344-b694-312dfb6c34d2</globalKey>
+        <inputFieldName>UpdatedComments</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hT</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hT</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Comments</outputFieldName>
+        <outputObjectName>DocumentChecklistItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{
+  &quot;null&quot; : &quot;&quot;
+}</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>6d994ca0-70cb-4aea-8011-a6608843f9ba</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hU</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hU</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>DocumentChecklistItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ebe2e863-3b63-4d87-ab42-e4a8a4f0ab58</globalKey>
+        <inputFieldName>DocumentUploadInfo:ExistingDocumentList:RelatedContentDocumentId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hR</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hR</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContentDocumentId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;null&quot;</formulaConverted>
+        <formulaExpression>&quot;null&quot;</formulaExpression>
+        <formulaResultPath>UpdatedComments</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>719160d1-4134-4d2f-b90f-f89cfd123193</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hS</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hS</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>2a6e67ff-b809-4165-bdb8-59049dae2d81</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hX</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hX</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>163eb10c-5041-4515-8580-50ef77c53648</globalKey>
+        <inputFieldName>DocumentUploadInfo:ExistingDocumentList:DocumentChecklistId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hV</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LinkedEntityId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>667745d8-b78a-401b-98c8-f17e35a84239</globalKey>
+        <inputFieldName>DocumentUploadInfo:ExistingDocumentList:DocumentChecklistId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFAttachDocumentToDocumentChecklistItem</name>
+        <omniDataTransformation>0kdjX00000007hW</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007hW</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>DocumentChecklistItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;DocumentUploadInfo&quot; : [ {
+    &quot;UploadedDocuments&quot; : 3,
+    &quot;ExistingDocumentList&quot; : [ {
+      &quot;DocumentTypeId&quot; : &quot;&quot;,
+      &quot;RelatedApplicantId&quot; : &quot;&quot;,
+      &quot;DocumentType&quot; : &quot;&quot;,
+      &quot;DocumentChecklistId&quot; : &quot;&quot;,
+      &quot;RelatedContentDocumentId&quot; : &quot;&quot;
+    } ]
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DigitalLendingDFAttachDocumentToDocumentChecklistItem_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

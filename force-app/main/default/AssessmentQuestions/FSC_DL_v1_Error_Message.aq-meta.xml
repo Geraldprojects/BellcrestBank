@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Error Message</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Looks like something went wrong. Try again or contact your financial institution for help.</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>TextBlock</dataType>
+    <developerName>FSC_DL_v1_Error_Message</developerName>
+    <name>Error Message</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

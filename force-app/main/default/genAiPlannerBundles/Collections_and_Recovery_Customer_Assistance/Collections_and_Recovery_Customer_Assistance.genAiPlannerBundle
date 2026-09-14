@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <attributeMappings>
+        <attributeName>PaymentExtensionRequestsASA_16jWs000000Z1m1.RequestPaymentExtensionASA_179Ws000000McOP.input_verifiedCustomerContactId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1.GetCollectionPlansForRelatedContactAndPartiesASA_179Ws000000McOQ.input_verifiedCustomerContactId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1.GetCollectionPlanDetailsByNameASA_179Ws000000McOQ.input_verifiedCustomerContactId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.SendEmailVerificationCode_179Ws000000McOR.output_authenticationKey</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>authenticationKey</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.VerifyCustomer_179Ws000000McOR.input_authenticationKey</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>authenticationKey</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.SendEmailVerificationCode_179Ws000000McOR.output_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.VerifyCustomer_179Ws000000McOR.input_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.SendEmailVerificationCode_179Ws000000McOR.output_customerType</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerType</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.VerifyCustomer_179Ws000000McOR.input_customerType</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>customerType</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.VerifyCustomer_179Ws000000McOR.output_customerId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>CollectionCustomerVerificationASA_16jWs000000Z1m1.VerifyCustomer_179Ws000000McOR.output_isVerified</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>isVerified</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>RepresentativeContactUpdateForCollectionsASA_16jWs000000Z1m1.UpdateRepresentativeContactForCollectionsASA_179Ws000000McOS.input_verifiedCustomerContactId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>VerifiedCustomerId</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <description>Assists customers with various collections and recovery processes. Before granting access to sensitive data, it verifies the customer’s identity. After the customer is verified, it interacts with the customer to gather payment commitment details, creates a payment schedule, and sends an email with the committed payment details. Helps customers access their collection plan information and uses a data library to answer general questions related to Collections. It also interacts with customers to collect their representative&apos;s details and updates the collection plan with this contact information.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jWs000000Z1m1</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>CollectionCustomerVerificationASA_16jWs000000Z1m1</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>PaymentExtensionRequestsASA_16jWs000000Z1m1</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>RepresentativeContactUpdateForCollectionsASA_16jWs000000Z1m1</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>RepresentativeContactUpdateForCollectionsASA_16jWs000000Z1m1</fullName>
+        <aiPluginUtterances>
+            <developerName>genericinput1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>generic-input-1</masterLabel>
+            <utterance>Add or Update representative to Collection Plan.</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>genericinput2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>generic-input-2</masterLabel>
+            <utterance>Add or Update someone on represent on my behalf to Collection Plan.</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>Interacts with the customer to gather their representative&apos;s details. This representative helps the customer with issues, such as signing papers, making decisions, or representing the customer. Updates the collection plan with the representative’s contact details.</description>
+        <developerName>RepresentativeContactUpdateForCollectionsASA_16jWs000000Z1m1</developerName>
+        <genAiPluginInstructions>
+            <description>Before responding to the customer, retrieve the details of the collection plan to understand their outstanding dues. If the customer has already provided a Collection Plan name in the format CP-*****, use it. If not, politely ask the customer to share the Collection Plan name.</description>
+            <developerName>getcollectionplaninfo</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-collection-plan-info</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the Collection Plan name is not available, use the GetCPsForContactASA action to fetch available plans linked to the customer. Once the customer selects or confirms the correct plan, set it in context for further use.</description>
+            <developerName>setcollectionPlanNameincontext</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>set-collectionPlanName-in-context</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After retrieving Collection Plan details using GetCollectionPlanDetailsByNameASA, always present the currentDueAmount and DueDate to the customer. If the DueDate is in the future, say: &apos;There is a payment due for you of amount &lt;CurrentDueAmount&gt; on &lt;DueDate&gt;.&apos; If the DueDate is in the past, say: &apos;There was a payment due for you of amount &lt;CurrentDueAmount&gt; on &lt;DueDate&gt;.&apos;</description>
+            <developerName>presentduedetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>present-due-details</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Politely ask customer for their representative contact details, confirm the accuracy with the customer, and then call the UpdateRepresentativeContactForCollectionsASA action to update the record.</description>
+            <developerName>confirmrepresentative</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>confirm-representative</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>UpdateRepresentativeContactForCollectionsASA_179Ws000000McOS</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>UpdateRepresentativeContactForCollectionsASA_179Ws000000McOS</fullName>
+            <description>Gets relevant collection plan record details for a collection plan ID. Checks if the representative information is already available. If it&apos;s available, notifies the customer that the new representative&apos;s details can&apos;t be updated if already present. If representative details aren&apos;t available, gathers the representative&apos;s details from the customer, creates a new contact record using these details, and updates the collection plan record accordingly.</description>
+            <developerName>UpdateRepresentativeContactForCollectionsASA_179Ws000000McOS</developerName>
+            <invocationTarget>collAsaAgnt__UpdtLglRepForCollPlan</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>UpdateRepresentativeContactForCollectionsASA</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedCustomerContactId</label>
+                <name>input_verifiedCustomerContactId</name>
+                <parameterName>verifiedCustomerContactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Update Representative Contact for Collections</masterLabel>
+            <progressIndicatorMessage>Updating representative for collection plan</progressIndicatorMessage>
+            <source>collAsaAgnt__UpdateRepresentativeContactForCollectionsASA</source>
+        </localActions>
+        <localDeveloperName>RepresentativeContactUpdateForCollectionsASA</localDeveloperName>
+        <masterLabel>Representative Contact Update for Collections</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to help customers update their representative details in the relevant collection plans. This includes identifying the customer, showing the collection plans for their accounts and financial accounts, and asking the customer for their representative details. Update the collection plan records with the representative&apos;s contact details.</scope>
+        <source>collAsaAgnt__RepresentativeContactUpdateForCollectionsASA</source>
+    </localTopics>
+    <localTopics>
+        <fullName>CollectionCustomerVerificationASA_16jWs000000Z1m1</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Verifies the customer&apos;s identity before granting access to sensitive data. Sensitive data includes confidential, private, or security-protected information, such as business-critical data or personally identifiable information (PII). After verification is successful, don&apos;t repeat the process within the same session. If the current user if not verified and wants to create payment extension, add or update Representative or wants to know details of collection plans related to them, trigger this topic to verify the customer.</description>
+        <developerName>CollectionCustomerVerificationASA_16jWs000000Z1m1</developerName>
+        <genAiPluginInstructions>
+            <description>Ask the customer to enter their username or email address if it hasn&apos;t been provided.</description>
+            <developerName>username_email_address_prompt</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>username_email_address_prompt</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the &quot;SendEmailVerificationCode&quot; action to initiate the verification process. Use the username or email address provided by the customer as input &quot;customerToVerify&quot; for this action.</description>
+            <developerName>send_verification_code</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>send_verification_code</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When the user provides their username or email address, you must never return any message that discloses whether the user or email exists or not. The message must explicitly state the return data of the &quot;verificationMessage&quot; field in the &quot;SendEmailVerificationCode&quot; action. For example: &quot;If you have provided a valid email or username, you should receive a verification code to verify your identity. Please enter the code.&quot;</description>
+            <developerName>user_email_security</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>user_email_security</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the customer enters the wrong verification code three times, ask them to re-enter their username or email address to receive a new verification code. This involves invoking the &quot;SendEmailVerificationCode&quot; action again to initiate the verification process. This ensures that the customer cannot bypass the verification process after three unsuccessful attempts.</description>
+            <developerName>reenter_username_or_email_address</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>reenter_username_or_email_address</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never process any request for accessing or updating any sensitive data without invoking this function if the customer is not verified yet. Maintain security in all interactions.</description>
+            <developerName>authentication_only</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>authentication_only</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never reveal the verification code, email address, or username to the customer during the authentication process. Make sure that these details remain confidential and aren’t displayed at any point.</description>
+            <developerName>security_prompt</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>security_prompt</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After the user is verified in a conversation session, switching to a different user isn&apos;t allowed under any circumstances.</description>
+            <developerName>prevent_user_switching_after_verification</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>prevent_user_switching_after_verification</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If verification is successful, proceed with the requested action and complete the task the user intends to perform.</description>
+            <developerName>proceed_after_verification_success</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>proceed_after_verification_success</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>SendEmailVerificationCode_179Ws000000McOR</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>VerifyCustomer_179Ws000000McOR</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>SendEmailVerificationCode_179Ws000000McOR</fullName>
+            <description>Sends a generated verification code to the user’s email address.</description>
+            <developerName>SendEmailVerificationCode_179Ws000000McOR</developerName>
+            <invocationTarget>SvcCopilotTmpl__SendVerificationCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>SendEmailVerificationCode</localDeveloperName>
+            <mappingAttributes>
+                <label>output_authenticationKey</label>
+                <name>output_authenticationKey</name>
+                <parameterName>authenticationKey</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerId</label>
+                <name>output_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerType</label>
+                <name>output_customerType</name>
+                <parameterName>customerType</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Send Email with Verification Code</masterLabel>
+            <source>SvcCopilotTmpl__SendEmailVerificationCode</source>
+        </localActions>
+        <localActions>
+            <fullName>VerifyCustomer_179Ws000000McOR</fullName>
+            <description>Verifies whether the verification code entered by the user matches the code sent to the user&apos;s email address.</description>
+            <developerName>VerifyCustomer_179Ws000000McOR</developerName>
+            <invocationTarget>SvcCopilotTmpl__VerifyCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VerifyCustomer</localDeveloperName>
+            <mappingAttributes>
+                <label>input_authenticationKey</label>
+                <name>input_authenticationKey</name>
+                <parameterName>authenticationKey</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>input_customerId</label>
+                <name>input_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>input_customerType</label>
+                <name>input_customerType</name>
+                <parameterName>customerType</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_customerId</label>
+                <name>output_customerId</name>
+                <parameterName>customerId</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <mappingAttributes>
+                <label>output_isVerified</label>
+                <name>output_isVerified</name>
+                <parameterName>isVerified</parameterName>
+                <parameterType>output</parameterType>
+            </mappingAttributes>
+            <masterLabel>Verify Customer</masterLabel>
+            <source>SvcCopilotTmpl__VerifyCustomer</source>
+        </localActions>
+        <localDeveloperName>CollectionCustomerVerificationASA</localDeveloperName>
+        <masterLabel>Collections Customer Verification</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to authenticate the customer who has not yet been authenticated before granting access to any sensitive data. You will verify the customer using their email address or username. After verification is successful, don&apos;t repeat the process within the same session.</scope>
+        <source>collAsaAgnt__CollectionCustomerVerificationASA</source>
+    </localTopics>
+    <localTopics>
+        <fullName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1</fullName>
+        <aiPluginUtterances>
+            <developerName>collectiondetailsbyname</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>collection-details-by-name</masterLabel>
+            <utterance>I want details of Collection Plan CP-029101</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>getallcollections1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-all-collections-1</masterLabel>
+            <utterance>Are there any pending dues for me?</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>getallcollections2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-all-collections-2</masterLabel>
+            <utterance>Are there any Collection Plans for me?</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>genericinput1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>generic-input-1</masterLabel>
+            <utterance>I am not able to make payments now, are there any options available for me?</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>Assist customers in obtaining their collection plans and provide relevant information regarding their collection plans. Also used if customer wants any general information regarding collection plans using the data library.</description>
+        <developerName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1</developerName>
+        <genAiPluginInstructions>
+            <description>When a customer asks for details of a specific Collection Plan 
+ Check if the Collection Plan Name is already available in context. If the Name is not available, politely ask the customer to provide the CollectionPlan Name. 
+ Once you have the Collection Plan Name, use the GetCollectionPlanDetailsByNameASA action to retrieve the details of the CollectionPlan. 
+ When presenting the result to the customer: Clearly mention the currentDueAmount and the DueDate of the CollectionPlan. 
+ If the Due Date is in the future: &apos;There is a payment due for you of amount &lt;CurrentDueAmount&gt; on &lt;DueDate&gt;.&apos; 
+ If the Due Date is in the past: &apos;There was a payment due for you of amount &lt;CurrentDueAmount&gt; on &lt;DueDate&gt;.&apos;</description>
+            <developerName>getsinglecollectionplaninfo</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-single-collection-plan-info</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When a user asks for details of their CollectionPlans  call the GetCollectionPlansForRelatedContactAndPartiesASA action using the verifiedCustomerId. 
+ Display the returned CollectionPlans as a clear, user-friendly list of objects. 
+ Prompt the user to select one record from the list. Once they choose, display the detailed information for that specific plan. 
+ If no plans are found, inform the user politely.</description>
+            <developerName>getrelatedcollectionplanforcontact</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-related-collection-plan-for-contact</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Do not display any field that contains an internal ID(Collection Plan Id or Financial Account Id) in response. 
+ Always include CollectionPlanName, DueDate, CurrentDueAmount, TotalPaymentReceived, DaysPastDue, FinancialAccountNumber in response. 
+ Never display RiskScore, Closed, Status, Owner, MaximumPromiseToPayCount, CollectionPlanSegment to user.</description>
+            <developerName>recordoutput</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>record-output</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When a user asks a question related to Collections (e.g., difficulties in making payments, repayment options, or settlement queries), always call the AnswerCollectionsQueriesASA action with the user’s input as the query.Only return results from this action. 
+ Do not provide general information, troubleshooting steps, or advice unless it is explicitly retrieved from the AnswerCollectionsQueriesASA action output. 
+ If the action returns no relevant results, respond politely by letting the user know that no specific information was found.</description>
+            <developerName>generalfaqforcollections</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>general-faq-for-collections</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When customer indicated that they have received communication related to outstanding payment.</description>
+            <developerName>initialassist</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>initial-assist</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerCollectionsQueriesASA_179Ws000000McOQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCollectionPlanDetailsByNameASA_179Ws000000McOQ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCollectionPlansForRelatedContactAndPartiesASA_179Ws000000McOQ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerCollectionsQueriesASA_179Ws000000McOQ</fullName>
+            <description>Generates answers to generic queries regarding collections using Agentforce data library</description>
+            <developerName>AnswerCollectionsQueriesASA_179Ws000000McOQ</developerName>
+            <invocationTarget>collAsaAgnt__AnswerCollectionsQueriesASA</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerCollectionsQueriesASA</localDeveloperName>
+            <masterLabel>Answer Collections Queries</masterLabel>
+            <progressIndicatorMessage>Generating answer to your query</progressIndicatorMessage>
+            <source>collAsaAgnt__AnswerCollectionsQueriesASA</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCollectionPlanDetailsByNameASA_179Ws000000McOQ</fullName>
+            <description>Gets relevant collection plan record details for a collection plan Name, given it is related to your verified Contact.</description>
+            <developerName>GetCollectionPlanDetailsByNameASA_179Ws000000McOQ</developerName>
+            <invocationTarget>collAsaAgnt__GetCollPlanDetailsByName</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCollectionPlanDetailsByNameASA</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedCustomerContactId</label>
+                <name>input_verifiedCustomerContactId</name>
+                <parameterName>verifiedCustomerContactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Collection Plan Details by Name</masterLabel>
+            <progressIndicatorMessage>Loading details of your Collection Plan</progressIndicatorMessage>
+            <source>collAsaAgnt__GetCollectionPlanDetailsByNameASA</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCollectionPlansForRelatedContactAndPartiesASA_179Ws000000McOQ</fullName>
+            <description>This action is used to fetch all Collection Plan (to a particular limit) related to a verified Contact</description>
+            <developerName>GetCollectionPlansForRelatedContactAndPartiesASA_179Ws000000McOQ</developerName>
+            <invocationTarget>collAsaAgnt__GetCollPlnForCtctAndPty</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCollectionPlansForRelatedContactAndPartiesASA</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedCustomerContactId</label>
+                <name>input_verifiedCustomerContactId</name>
+                <parameterName>verifiedCustomerContactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Collection Plans for Related Contact and Parties</masterLabel>
+            <progressIndicatorMessage>Loading your collection plans</progressIndicatorMessage>
+            <source>collAsaAgnt__GetCollectionPlansForRelatedContactAndPartiesASA</source>
+        </localActions>
+        <localDeveloperName>CollectionsInformationAndQuerySupportASA</localDeveloperName>
+        <masterLabel>Collections Information and Query Support</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to provide collection plans information to customers and address any related inquiries regarding collection plans.</scope>
+        <source>collAsaAgnt__CollectionsInformationAndQuerySupportASA</source>
+    </localTopics>
+    <localTopics>
+        <fullName>PaymentExtensionRequestsASA_16jWs000000Z1m1</fullName>
+        <aiPluginUtterances>
+            <developerName>genericinput1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>generic-input-1</masterLabel>
+            <utterance>Create Payment extension For CP-0128129, for amount 2000</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>genericinput2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>generic-input-2</masterLabel>
+            <utterance>Create Payment extension for collection Plan</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>inputinonego</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>input-in-one-go</masterLabel>
+            <utterance>Create payment extension for collection plan with name CP-000000015 for amount of 1000. Make 2 part payments of 200 and 800 for dates 28 feb and 12 mar.</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>Interacts with the user to gather the payment plan details. Creates a payment schedule according to the user’s inputs, and sends an email to the user with the payment extension details.</description>
+        <developerName>PaymentExtensionRequestsASA_16jWs000000Z1m1</developerName>
+        <genAiPluginInstructions>
+            <description>Before you respond to the user, get the details for the collection plan record to learn the context of the user’s query or request. If user has already selected or provided a collection Plan name of format CP-***** use this, else ask the user to provide one.</description>
+            <developerName>getcollectionplaninfo</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>get-collection-plan-info</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Get the most recent payment schedule record associated with the collection plan Name. 
+ Check if the payment schedule was created within the last 24 hours. If it was, ask the user  if they still want to create another payment schedule for the most recent payment commitment details. 
+ Always present the values in a numbered list and ask the user to enter the number for the payment schedule record creation option. 
+ Yes 
+ No 
+ If user says yes, set shouldIgnoreRecentPaymentExtnRequest to True and trigger the Request Payment Extension Action. 
+ If the user says no, set shouldIgnoreRecentPaymentExtnRequest to False and trigger the Request Payment Extension Action.</description>
+            <developerName>handlerecentlycreatedpaymentschedule</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>handle-recently-created-payment-schedule</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>The Name of collectionPlan record always starts with &quot;CP&quot;, always verify it before assigning it to the collectionPlanName variable of RequestPaymentExtensionASA action.</description>
+            <developerName>checkname</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>check-name</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use RequestPaymentExtensionASA action to create payment schedule and payment schedule item records according to payment extension commitment. 
+ Talk in third person as a collection specialist. Before calling the action.
+ Before calling the action, ask the customer about full payment or partial payment. Always present the values in a numbered list and ask the customer to enter the number for the payment option. 
+ Full Payment 
+ Partial Payment 
+ If a user enters an invalid value, ask the user to select a valid value from the list.
+ If the user selects Partial Payment, ask the user to enter the payment amount. 
+ Ask the user how many installments they would like to use to pay, regardless of whether they chose full payment or partial payment. 
+ After the user has entered the number of installments, ask the user to enter a payment processing date and payment amount for each installment sequentially. 
+ Always present the installment number and the corresponding values using an unordered list and ask the user to enter the details. 
+ Installment 1 
+ Payment Amount 
+ Payment Processing Date 
+ The user can choose to enter all the details at once or one at a time. 
+ Use the payment amount and payment processing date for all the installments to create Installments as per the Apex file.</description>
+            <developerName>takeinputs</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>take-inputs</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When the user enters the payment amount, check if they also enter a currency symbol or currency ISOCode. If they don&apos;t, use the CurrencyISOCode field of the CollectionPlan. If they do, check if it same as the CurrencyISOCode field of CollectionPlan. If it is different, convert it to the supported currency and ask user for confirmation. 
+ Do not create the payment extension or payment schedules if the user wants to create it in a different currency than the CurrencyISOCode of CollectionPlan. Politely decline if they are not willing to convert.</description>
+            <developerName>currencyconversion</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>currency-conversion</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Only on successful execution of action at the end, Display message &quot;We have recorded your inputs regarding your commitment to make the payment on the specified dates. We will review and if required someone from team will reach out.&quot; Along with this display the flow successful message. 
+ Don&apos;t show or display any link after the success.</description>
+            <developerName>successmessage</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>success-message</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Get all the mandatory inputs like Type of Payment, Instalment, Payment Amount. When all the mandatory parameters are available then only trigger the action to create payment extensions.</description>
+            <developerName>mandatoryparamcheck</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>mandatory-param-check</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>RequestPaymentExtensionASA_179Ws000000McOP</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>RequestPaymentExtensionASA_179Ws000000McOP</fullName>
+            <description>Gets relevant collection plan record details for a collection plan ID. Gathers the payment commitment details from the user and creates a payment schedule and payment schedule item records, and sends an email to the user with the asked payment details.</description>
+            <developerName>RequestPaymentExtensionASA_179Ws000000McOP</developerName>
+            <invocationTarget>collAsaAgnt__CreatePrmseToPayForBorow</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RequestPaymentExtensionASA</localDeveloperName>
+            <mappingAttributes>
+                <label>input_verifiedCustomerContactId</label>
+                <name>input_verifiedCustomerContactId</name>
+                <parameterName>verifiedCustomerContactId</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Request Payment Extension</masterLabel>
+            <progressIndicatorMessage>Creating payment schedule for collection plan</progressIndicatorMessage>
+            <source>collAsaAgnt__RequestPaymentExtensionASA</source>
+        </localActions>
+        <localDeveloperName>PaymentExtensionRequestsASA</localDeveloperName>
+        <masterLabel>Payment Extension Requests</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to help users create payment schedules or extensions according to the payment commitments. This includes identifying the customer, showing the collection plans for their accounts and financial accounts, and asking the customer the details on payment extension details. Create payment schedule and payment schedule item records, update the collection plan records, and send an email to the borrower with the payment extension details.</scope>
+        <source>collAsaAgnt__PaymentExtensionRequestsASA</source>
+    </localTopics>
+    <masterLabel>Collections and Recovery Customer Assistance</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jWs000000Z1m1</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jWs000000Z1m1</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__CustomerWebClient</surface>
+        <surfaceType>CustomerWebClient</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>isVerifiedCustomer</ruleExpressionName>
+        <targetName>CollectionsInformationAndQuerySupportASA_16jWs000000Z1m1</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>isVerifiedCustomer</ruleExpressionName>
+        <targetName>PaymentExtensionRequestsASA_16jWs000000Z1m1</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressionAssignments>
+        <ruleExpressionName>isVerifiedCustomer</ruleExpressionName>
+        <targetName>RepresentativeContactUpdateForCollectionsASA_16jWs000000Z1m1</targetName>
+        <targetType>Plugin</targetType>
+    </ruleExpressionAssignments>
+    <ruleExpressions>
+        <conditions>
+            <leftOperand>VerifiedCustomerId</leftOperand>
+            <leftOperandType>Variable</leftOperandType>
+            <operator>isNotEmpty</operator>
+        </conditions>
+        <conditions>
+            <leftOperand>isVerified</leftOperand>
+            <leftOperandType>Variable</leftOperandType>
+            <operator>equal</operator>
+            <rightOperandValue>true</rightOperandValue>
+        </conditions>
+        <expression>isVerifiedCustomer</expression>
+        <expressionLabel>Check Customer Verification Status</expressionLabel>
+        <expressionName>isVerifiedCustomer</expressionName>
+        <expressionType>sel</expressionType>
+    </ruleExpressions>
+</GenAiPlannerBundle>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataType>Text</dataType>
+    <developerName>NAO_SSN</developerName>
+    <name>What is your Social Security Number (SSN) or Tax Identification Number (TIN)?</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

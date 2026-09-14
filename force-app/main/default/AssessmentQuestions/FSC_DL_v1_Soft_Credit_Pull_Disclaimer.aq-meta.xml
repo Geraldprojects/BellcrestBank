@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Soft Credit Pull Disclaimer</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Please note that a soft pull will be used to check your credit score. This type of credit check won&apos;t affect your credit rating and won&apos;t be visible to others. A soft pull is a credit check that doesn&apos;t affect your credit score. It&apos;s often used for verification or pre-qualification purposes, and is not visible to other lendors or creditors.</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>TextBlock</dataType>
+    <developerName>FSC_DL_v1_Soft_Credit_Pull_Disclaimer</developerName>
+    <name>Soft Credit Pull Disclaimer</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

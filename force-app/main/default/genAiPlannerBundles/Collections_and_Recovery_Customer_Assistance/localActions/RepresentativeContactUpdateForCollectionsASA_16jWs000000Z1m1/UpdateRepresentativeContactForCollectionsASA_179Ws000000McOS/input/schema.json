@@ -1,0 +1,57 @@
+{
+  "required" : [ "LastName", "collectionPlanId", "verifiedCustomerContactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Email" : {
+      "title" : "Email",
+      "description" : "The email of the representative.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : true
+    },
+    "FirstName" : {
+      "title" : "First Name",
+      "description" : "The first name of the representative.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : true
+    },
+    "LastName" : {
+      "title" : "Last Name",
+      "description" : "The last name of the representative.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : true
+    },
+    "Mobile" : {
+      "title" : "Mobile",
+      "description" : "The mobile number of the representative.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : true
+    },
+    "Phone" : {
+      "title" : "Phone",
+      "description" : "The phone number of the representative.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : true,
+      "copilotAction:isUserInput" : true
+    },
+    "collectionPlanName" : {
+      "title" : "Collection Plan Name",
+      "description" : "The Name of the collection plan record.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "verifiedCustomerContactId" : {
+      "title" : "Verified Customer Contact ID",
+      "description" : "The ID of the contact associated with the collection plan record.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Additional Income Source Frequency</name>
+        <optionSourceResponseValue>true</optionSourceResponseValue>
+        <questionText>Income Frequency</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Select</dataType>
+    <developerName>FSC_DL_v1_Additional_Income_Source_Frequency</developerName>
+    <name>Additional Income Source Frequency</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

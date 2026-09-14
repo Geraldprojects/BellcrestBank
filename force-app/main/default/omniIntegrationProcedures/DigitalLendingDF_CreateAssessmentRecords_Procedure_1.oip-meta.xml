@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniIntegrationProcedure xmlns="http://soap.sforce.com/2006/04/metadata">
+    <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
+    <isActive>true</isActive>
+    <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
+    <isIntegrationProcedure>true</isIntegrationProcedure>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <isMetadataCacheDisabled>false</isMetadataCacheDisabled>
+    <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+    <isTestProcedure>false</isTestProcedure>
+    <isWebCompEnabled>false</isWebCompEnabled>
+    <language>Procedure</language>
+    <name>DigitalLendingDFCreateAssessmentRecords</name>
+    <omniProcessElements>
+        <description>Remote Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>CreateAssessmentForApplicationForm</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;sendOnlyAdditionalInput&quot; : true,
+  &quot;remoteOptions&quot; : {
+    &quot;Assessment.AssessmentStatus&quot; : &quot;Completed&quot;,
+    &quot;Assessment.EffectiveDateTime&quot; : &quot;%SetValues:EffectiveDateTime%&quot;,
+    &quot;Assessment.Type&quot; : &quot;%LoanType%&quot;,
+    &quot;Assessment.ResponseContextId&quot; : &quot;%ApplicationFormId%&quot;,
+    &quot;Assessment.Name&quot; : &quot;%SetValues:ParentAssessmentName%&quot;
+  },
+  &quot;remoteMethod&quot; : &quot;invokeMethod&quot;,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : { },
+  &quot;failOnStepError&quot; : false,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;assessmentId&quot;,
+  &quot;responseJSONNode&quot; : &quot;ParentAssessmentId&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;remoteClass&quot; : &quot;DiscoveryFrmwrk.StoreResponses&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : { },
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureResponse&quot; : { },
+  &quot;id&quot; : &quot;&quot;,
+  &quot;additionalInput&quot; : {
+    &quot;AdditionalProductInformation&quot; : &quot;%AdditionalProductInformation%&quot;,
+    &quot;LoanDetails&quot; : &quot;%LoanDetails%&quot;,
+    &quot;AutomaticPayments&quot; : &quot;%AutomaticPayments%&quot;
+  },
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+        <sequenceNumber>2.0</sequenceNumber>
+        <type>Remote Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <description>Remote Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>CreateAssessmentForPrimaryApplicant</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;sendOnlyAdditionalInput&quot; : true,
+  &quot;remoteOptions&quot; : {
+    &quot;Assessment.AssessmentStatus&quot; : &quot;Completed&quot;,
+    &quot;Assessment.EffectiveDateTime&quot; : &quot;%SetValues:EffectiveDateTime%&quot;,
+    &quot;Assessment.ParentId&quot; : &quot;%ParentAssessmentId%&quot;,
+    &quot;Assessment.Type&quot; : &quot;%LoanType%&quot;,
+    &quot;Assessment.ResponseContextId&quot; : &quot;%ApplicationFormId%&quot;,
+    &quot;Assessment.Name&quot; : &quot;%SetValues:PrimaryApplicantAssessmentName%&quot;,
+    &quot;Assessment.ApplicantId&quot; : &quot;%PrimaryApplicantId%&quot;,
+    &quot;Assessment.PartyProfileId&quot; : &quot;%PrimaryApplicantPartyProfileId%&quot;
+  },
+  &quot;remoteMethod&quot; : &quot;invokeMethod&quot;,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : { },
+  &quot;failOnStepError&quot; : false,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;assessmentId&quot;,
+  &quot;responseJSONNode&quot; : &quot;PrimaryApplicantAssessmentId&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;remoteClass&quot; : &quot;DiscoveryFrmwrk.StoreResponses&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : { },
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureResponse&quot; : { },
+  &quot;id&quot; : &quot;&quot;,
+  &quot;additionalInput&quot; : {
+    &quot;PrimaryApplicantAssets:AssetDeclaration&quot; : &quot;%SetValues:PrimaryApplicantAssets%&quot;,
+    &quot;IncomeInformation&quot; : &quot;%IncomeInformation%&quot;,
+    &quot;PersonalInformation&quot; : &quot;%PersonalInformation%&quot;,
+    &quot;ConsentStatus:FSC_DL_v1_Consent_Status&quot; : &quot;%FSC_DL_v1_Consent_Status%&quot;,
+    &quot;Expenses&quot; : &quot;%Expenses%&quot;,
+    &quot;AddressInformation&quot; : &quot;%AddressInformation%&quot;,
+    &quot;EmploymentInformation&quot; : &quot;%EmploymentInformation%&quot;,
+    &quot;AdditionalOwnerDetails:PrimaryApplicantAssetOwner&quot; : &quot;%SetValues:PrimaryApplicantAssets:Owners%&quot;,
+    &quot;LienDetails:PrimaryApplicantAssetLien&quot; : &quot;%SetValues:PrimaryApplicantAssets:Liens%&quot;
+  },
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+        <sequenceNumber>3.0</sequenceNumber>
+        <type>Remote Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <childElements>
+            <description>Remote Action</description>
+            <isActive>true</isActive>
+            <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+            <level>1.0</level>
+            <name>CreateAssessmentsForAdditionalApplicants</name>
+            <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+            <propertySetConfig>{
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;remoteOptions&quot; : {
+    &quot;Assessment.AssessmentStatus&quot; : &quot;Completed&quot;,
+    &quot;Assessment.EffectiveDateTime&quot; : &quot;%SetValues:EffectiveDateTime%&quot;,
+    &quot;Assessment.ParentId&quot; : &quot;%ParentAssessmentId%&quot;,
+    &quot;Assessment.Type&quot; : &quot;%LoanType%&quot;,
+    &quot;Assessment.ResponseContextId&quot; : &quot;%ApplicationFormId%&quot;,
+    &quot;Assessment.Name&quot; : &quot;%SetAssessmentName:AssessmentName%&quot;,
+    &quot;Assessment.ApplicantId&quot; : &quot;%SetValues:AdditionalApplicantList:applicantId%&quot;,
+    &quot;Assessment.PartyProfileId&quot; : &quot;%SetValues:AdditionalApplicantList:partyProfileId%&quot;
+  },
+  &quot;remoteMethod&quot; : &quot;invokeMethod&quot;,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : { },
+  &quot;failOnStepError&quot; : false,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;remoteClass&quot; : &quot;DiscoveryFrmwrk.StoreResponses&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : { },
+  &quot;sendJSONPath&quot; : &quot;SetValues:AdditionalApplicantList&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureResponse&quot; : { },
+  &quot;id&quot; : &quot;&quot;,
+  &quot;additionalInput&quot; : {
+    &quot;LienDetails:Liens&quot; : &quot;%SetAssessmentName:AssetDetails:Liens%&quot;,
+    &quot;isAdditionalApplicantExists:FSC_DL_v1_Add_Additional_Applicants&quot; : &quot;%SetValues:FSC_DL_v1_Add_Additional_Applicants%&quot;,
+    &quot;AssetDetails:AssetDeclaration&quot; : &quot;%SetAssessmentName:AssetDetails%&quot;,
+    &quot;RoleDetails:FSC_DL_v1_Role&quot; : &quot;%SetValues:AdditionalApplicantList:FSC_DL_v1_Role%&quot;,
+    &quot;AdditionalOwnerDetails:Owners&quot; : &quot;%SetAssessmentName:AssetDetails:Owners%&quot;
+  },
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+            <sequenceNumber>2.0</sequenceNumber>
+            <type>Remote Action</type>
+        </childElements>
+        <childElements>
+            <description>Set Values Action</description>
+            <isActive>true</isActive>
+            <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+            <level>1.0</level>
+            <name>SetAssessmentName</name>
+            <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+            <propertySetConfig>{
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;elementValueMap&quot; : {
+    &quot;AssessmentName&quot; : &quot;=CONCAT(\&quot;Assessment\&quot;,\&quot;-\&quot;,%SetValues:AdditionalApplicantList:AdditionalPersonalInformation:FSC_DL_v1_Additional_First_Name%,\&quot; \&quot;,%SetValues:AdditionalApplicantList:AdditionalPersonalInformation:FSC_DL_v1_Additional_Last_Name%)&quot;,
+    &quot;AssetDetails&quot; : &quot;=FILTER(LIST(%AssetDeclaration:Asset%), &apos;PrimaryOwner == \&quot;&apos; + %SetValues:AdditionalApplicantList:partyProfileId% + &apos;\&quot;&apos;)&quot;
+  },
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : false,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;restOptions&quot; : { },
+  &quot;chainOnStep&quot; : false
+}</propertySetConfig>
+            <sequenceNumber>1.0</sequenceNumber>
+            <type>Set Values</type>
+        </childElements>
+        <description>Loop Block</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>LoopOverAdditionalApplicants</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;elementValueMap&quot; : { },
+  &quot;loopList&quot; : &quot;SetValues:AdditionalApplicantList&quot;,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;restOptions&quot; : { },
+  &quot;loopOutput&quot; : {
+    &quot;assessmentId&quot; : &quot;%CreateAssessmentsForAdditionalApplicants:assessmentId%&quot;
+  }
+}</propertySetConfig>
+        <sequenceNumber>4.0</sequenceNumber>
+        <type>Loop Block</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <description>Response Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>ReturnResponse</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;returnFullDataJSON&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : { },
+  &quot;responseFormat&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : {
+    &quot;PrimaryApplicantAssessmentId&quot; : &quot;%PrimaryApplicantAssessmentId%&quot;,
+    &quot;ParentAssessmentId&quot; : &quot;%ParentAssessmentId%&quot;,
+    &quot;AdditionalApplicantAssessmentIdList&quot; : &quot;%LoopOverAdditionalApplicants:assessmentId%&quot;
+  },
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+        <sequenceNumber>5.0</sequenceNumber>
+        <type>Response Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <description>Set Values Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>SetValues</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;elementValueMap&quot; : {
+    &quot;PrimaryApplicantAssets&quot; : &quot;=FILTER(LIST(%AssetDeclaration:Asset%), &apos;PrimaryOwner == \&quot;&apos; + %PrimaryApplicantPartyProfileId% + &apos;\&quot;&apos;)&quot;,
+    &quot;FSC_DL_v1_Add_Additional_Applicants&quot; : &quot;%AdditionalApplicants:FSC_DL_v1_Add_Additional_Applicants%&quot;,
+    &quot;AdditionalApplicantList&quot; : &quot;=LIST(%AdditionalApplicants:ApplicantBlock%)&quot;,
+    &quot;EffectiveDateTime&quot; : &quot;%EffectiveDateTime%&quot;,
+    &quot;PrimaryApplicantAssessmentName&quot; : &quot;=CONCAT(\&quot;Assessment\&quot;,\&quot;-\&quot;,%PersonalInformation:FSC_DL_v1_First_Name%,\&quot; \&quot;,%PersonalInformation:FSC_DL_v1_Last_Name%)&quot;,
+    &quot;ParentAssessmentName&quot; : &quot;=CONCAT(\&quot;Assessment\&quot;,\&quot;-\&quot;,%LoanType%,\&quot; \&quot;,%PersonalInformation:FSC_DL_v1_First_Name%,\&quot; \&quot;,%PersonalInformation:FSC_DL_v1_Last_Name%)&quot;
+  },
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : false,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;restOptions&quot; : { },
+  &quot;chainOnStep&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>1.0</sequenceNumber>
+        <type>Set Values</type>
+    </omniProcessElements>
+    <omniProcessKey>DigitalLendingDF_CreateAssessmentRecords</omniProcessKey>
+    <omniProcessType>Integration Procedure</omniProcessType>
+    <propertySetConfig>{
+  &quot;transientValues&quot; : {
+    &quot;activateOrDeactivateConsent&quot; : false
+  }
+}</propertySetConfig>
+    <subType>CreateAssessmentRecords</subType>
+    <type>DigitalLendingDF</type>
+    <uniqueName>DigitalLendingDF_CreateAssessmentRecords_Procedure_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+</OmniIntegrationProcedure>

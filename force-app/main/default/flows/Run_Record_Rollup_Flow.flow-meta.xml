@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Run_Record_Aggregation_Batch_Job</name>
+        <label>Run Record Aggregation Batch Job</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>runRecordAggrBatchProcDef</actionName>
+        <actionType>runRecordAggrBatchProcDef</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>executionReferenceId</name>
+            <value>
+                <elementReference>BatchId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>runRecordAggrBatchProcDef</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>Run Record Rollup Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Run Record Rollup Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Run_Record_Aggregation_Batch_Job</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>BatchId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>16yWs000000HoWfIAK</stringValue>
+        </value>
+    </variables>
+</Flow>

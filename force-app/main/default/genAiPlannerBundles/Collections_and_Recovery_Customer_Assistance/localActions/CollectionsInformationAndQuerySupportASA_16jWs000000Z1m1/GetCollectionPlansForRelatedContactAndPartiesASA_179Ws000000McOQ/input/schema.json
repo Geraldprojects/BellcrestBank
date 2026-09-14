@@ -1,0 +1,15 @@
+{
+  "required" : [ "verifiedCustomerContactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "verifiedCustomerContactId" : {
+      "title" : "verifiedCustomerContactId",
+      "description" : "The verified contact Id for which Collection Plan records are to be shown",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

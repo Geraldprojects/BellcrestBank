@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalValue</fullName>
+    <inlineHelpText>Specifies the value calculated as the adjustment value applied to the initial value for the item</inlineHelpText>
+</CustomField>

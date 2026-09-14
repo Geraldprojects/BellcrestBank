@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExplainabilityActionVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionSpecification>{}</actionSpecification>
+    <active>true</active>
+    <definitionVersion>1</definitionVersion>
+    <description>Audit log version 1 for compliance evaluations.</description>
+    <explainabilityActionDef>ComplianceEvaluationAuditLog</explainabilityActionDef>
+    <masterLabel>Compliance Evaluation Audit Log v1</masterLabel>
+</ExplainabilityActionVersion>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_FinclDealInteractionSummaries</fullName>
+    <filterScope>Everything</filterScope>
+    <label>__MISSING LABEL__ PropertyFile - val all not found in section FinclDealInteractionSummary</label>
+</ListView>

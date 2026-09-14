@@ -1,0 +1,55 @@
+{
+  "required" : [ "collectionPlanName", "installments", "promisedAmount", "verifiedCustomerContactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "collectionPlanName" : {
+      "title" : "collectionPlanName",
+      "description" : "Name of the Collection Plan for which Payment extension is to be created",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "comments" : {
+      "title" : "comments",
+      "description" : "Optional comments, populate if user provides. Don't explicitly ask",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "installments" : {
+      "title" : "installments",
+      "description" : "This uses the PSIInputObject apex file and prompts the user to first provide the number of installments. Then prompt them to provide the values for fields of each PSIInputObject",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "@apexClassType/fsc_collection_apex__Installment?isAuraEnabled=true"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "promisedAmount" : {
+      "title" : "promisedAmount",
+      "description" : "Total amount to be paid in the payment extension. This should equal sum of requested amounts in all installments",
+      "multipleOf" : 1.0E-34,
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "shouldIgnoreRecentPaymentExtnRequest" : {
+      "title" : "shouldIgnoreRecentPaymentExtnRequest",
+      "description" : "If user want to created a payment extension event though there is a recently created payment extension request, set it to true",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "verifiedCustomerContactId" : {
+      "title" : "verifiedCustomerContactId",
+      "description" : "The verified Contact Id, whose context is used to query records",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

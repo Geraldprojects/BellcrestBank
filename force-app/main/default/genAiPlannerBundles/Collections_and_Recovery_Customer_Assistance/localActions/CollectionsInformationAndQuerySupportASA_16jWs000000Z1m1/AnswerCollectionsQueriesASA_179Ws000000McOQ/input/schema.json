@@ -1,0 +1,22 @@
+{
+  "required" : [ "Input:query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:query" : {
+      "title" : "query",
+      "description" : "The general query or question that user is seeking answer to",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "outputLanguage" : {
+      "title" : "Prompt Operation output language",
+      "description" : "Select Prompt Operation output language",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

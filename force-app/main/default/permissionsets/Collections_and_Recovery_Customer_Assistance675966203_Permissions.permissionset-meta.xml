@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows custom permissions for Agentforce Agent : Collections_and_Recovery_Customer_Assistance&apos;s agent user : collections_and_recovery_customer_assistance@00dws00000ex6ed1433497425.ext.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Collections_and_Recovery_Customer_Assistance675966203 Permissions</label>
+    <license>Einstein Agent</license>
+</PermissionSet>

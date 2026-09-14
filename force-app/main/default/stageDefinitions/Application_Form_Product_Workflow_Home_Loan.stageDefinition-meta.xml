@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>Workflow for secured loan application</description>
+    <masterLabel>Application Form Product Workflow - Secured Loan</masterLabel>
+    <referenceObject>ApplicationFormProduct</referenceObject>
+    <referenceObjectField>Stage</referenceObjectField>
+    <stageTransition>
+        <fromStageValue>Intake</fromStageValue>
+        <toStageValue>Submitted</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Submitted</fromStageValue>
+        <toStageValue>In Review</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>In Review</fromStageValue>
+        <toStageValue>Need More Info</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>In Review</fromStageValue>
+        <toStageValue>Underwriter Approved</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>In Review</fromStageValue>
+        <toStageValue>Underwriter Rejected</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Need More Info</fromStageValue>
+        <toStageValue>Underwriter Approved</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Need More Info</fromStageValue>
+        <toStageValue>Underwriter Rejected</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Submitted</fromStageValue>
+        <toStageValue>Auto Approved</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Underwriter Approved</fromStageValue>
+        <toStageValue>Book to Core</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Auto Approved</fromStageValue>
+        <toStageValue>Book to Core</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Underwriter Approved</fromStageValue>
+        <toStageValue>Contract Generation</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Auto Approved</fromStageValue>
+        <toStageValue>Contract Generation</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Contract Generation</fromStageValue>
+        <toStageValue>Book to Core</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Need More Info</fromStageValue>
+        <toStageValue>In Review</toStageValue>
+    </stageTransition>
+    <stageValue>
+        <value>Intake</value>
+    </stageValue>
+    <stageValue>
+        <value>Submitted</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>In Review</name>
+            <step>
+                <apiName>Verify_Application_Details</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Verify Application Details</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Verify_Documents</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Verify Documents</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Evaluate_Eligibility</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Verify_Application_Details</step>
+                </dependency>
+                <dependency>
+                    <step>Verify_Documents</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Evaluate Eligibility</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Evaluate_Collateral</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Verify_Application_Details</step>
+                </dependency>
+                <dependency>
+                    <step>Verify_Documents</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Evaluate Collateral</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>In Review</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>Need More Info</name>
+            <step>
+                <apiName>Reach_out_for_Missing_Documents</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Reach out for Missing Documents</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Need More Info</value>
+    </stageValue>
+    <stageValue>
+        <value>Underwriter Approved</value>
+    </stageValue>
+    <stageValue>
+        <value>Underwriter Rejected</value>
+    </stageValue>
+    <stageValue>
+        <value>Auto Approved</value>
+    </stageValue>
+    <stageValue>
+        <value>Book to Core</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>Contract Generation</name>
+            <step>
+                <apiName>Create_Contract</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Create Contract</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Send_for_Signatures</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Create_Contract</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Send for Signatures</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Review_Closing_Documents</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Review Closing Documents</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Contract Generation</value>
+    </stageValue>
+</StageDefinition>

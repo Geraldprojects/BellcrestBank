@@ -1,0 +1,25 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "paymentScheduleLinkForCollectionPlan" : {
+      "title" : "paymentScheduleLinkForCollectionPlan",
+      "description" : "Link to the created PaymentSchedule record. Show this as a link that can be used to navigate to the PaymentSchedule record.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "statusMessage" : {
+      "title" : "statusMessage",
+      "description" : "Stores a text message indicating the flow execution status. This variable is available as output from the flow.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

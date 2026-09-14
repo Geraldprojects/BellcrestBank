@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#009EDB</headerColor>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>Deliver modern experiences for producers and account managers on a flexible, client-centric platform so you can improve client retention. Unify siloed data, automate routine processes, and create work flows that support your business’ needs - saving time</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Insurance Brokerage</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-InsurancePolicy</tabs>
+    <tabs>standard-CommissionStatement</tabs>
+    <tabs>standard-Producer</tabs>
+    <tabs>standard-ProducerSplitArrangement</tabs>
+    <tabs>standard-BrokerOfRecord</tabs>
+    <tabs>standard-Claim</tabs>
+    <tabs>standard-AccountingPeriod</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Insurance_Brokerage_UtilityBar</utilityBar>
+</CustomApplication>

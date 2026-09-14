@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageAssignment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <masterLabel>Loan Application Evaluation Workflow</masterLabel>
+    <referenceObject>ApplicationFormProduct</referenceObject>
+    <ruleCriteria>
+        <condition>
+            <fieldName>ApplicationFormProduct.ProductId.Name</fieldName>
+            <operator>Equals</operator>
+            <sequenceNumber>1</sequenceNumber>
+            <value>New Home Loan - Residential Mortgage</value>
+        </condition>
+        <condition>
+            <fieldName>ApplicationFormProduct.ProductId.Name</fieldName>
+            <operator>Equals</operator>
+            <sequenceNumber>2</sequenceNumber>
+            <value>Four Wheeler Auto Loan</value>
+        </condition>
+        <condition>
+            <fieldName>ApplicationFormProduct.ProductId.Name</fieldName>
+            <operator>Equals</operator>
+            <sequenceNumber>3</sequenceNumber>
+            <value>Two Wheeler Auto Loan</value>
+        </condition>
+        <criteriaType>OR</criteriaType>
+        <logicalExpression>1 OR 2 OR 3</logicalExpression>
+        <name>Secured Loan Application Evaluation Workflow</name>
+        <priority>1</priority>
+        <stageDefinition>Application_Form_Product_Workflow_Home_Loan</stageDefinition>
+    </ruleCriteria>
+    <ruleCriteria>
+        <condition>
+            <fieldName>ApplicationFormProduct.ProductId.Name</fieldName>
+            <operator>Contains</operator>
+            <sequenceNumber>1</sequenceNumber>
+            <value>Personal Loan</value>
+        </condition>
+        <criteriaType>AND</criteriaType>
+        <logicalExpression>1</logicalExpression>
+        <name>Unsecured Loan Application Workflow</name>
+        <priority>2</priority>
+        <stageDefinition>Application_Form_Product_Workflow_Unsecured_Loans</stageDefinition>
+    </ruleCriteria>
+</StageAssignment>

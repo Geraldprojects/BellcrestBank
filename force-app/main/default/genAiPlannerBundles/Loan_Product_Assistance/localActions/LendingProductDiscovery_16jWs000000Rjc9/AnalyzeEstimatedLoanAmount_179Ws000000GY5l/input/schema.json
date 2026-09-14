@@ -1,0 +1,32 @@
+{
+  "required" : [ "listRate", "loanTenure", "monthlyPayment" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "listRate" : {
+      "title" : "listRate",
+      "description" : "The interest rate applied annually to the selected loan product.",
+      "multipleOf" : 1.0E-34,
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "loanTenure" : {
+      "title" : "loanTenure",
+      "description" : "The loan tenure in months.",
+      "multipleOf" : 1.0E-34,
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "monthlyPayment" : {
+      "title" : "monthlyPayment",
+      "description" : "The user’s intended monthly payment towards the loan.",
+      "multipleOf" : 1.0E-34,
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

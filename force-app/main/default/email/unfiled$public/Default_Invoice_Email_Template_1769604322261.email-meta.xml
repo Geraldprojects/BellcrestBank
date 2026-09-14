@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template with a predefined structure and content format to send invoice details. The template includes the invoice number, balance amount, and due date.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Default Invoice Email Template</name>
+    <relatedEntityType>Invoice</relatedEntityType>
+    <style>none</style>
+    <subject>Your {{{Organization.Name}}} invoice {{{Invoice.DocumentNumber}}} is due {{{Invoice.DueDate}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

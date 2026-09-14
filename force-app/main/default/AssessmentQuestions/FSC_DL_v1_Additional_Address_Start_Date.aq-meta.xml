@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Additional Address Start Date</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Start Date</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Date</dataType>
+    <developerName>FSC_DL_v1_Additional_Address_Start_Date</developerName>
+    <name>Additional Address Start Date</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

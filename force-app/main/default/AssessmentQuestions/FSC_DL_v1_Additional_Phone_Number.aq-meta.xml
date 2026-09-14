@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Additional Phone Number</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Phone Number</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Telephone</dataType>
+    <developerName>FSC_DL_v1_Additional_Phone_Number</developerName>
+    <name>Additional Phone Number</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

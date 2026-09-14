@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalAppraisalValue</fullName>
+    <inlineHelpText>Specifies the cumulative value of the total item final value and the total adjustment value for this appraisal.</inlineHelpText>
+</CustomField>

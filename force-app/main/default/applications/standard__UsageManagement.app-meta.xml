@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Usage Management</label>
+    <navType>Console</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-TransactionUsageEntitlement</tabs>
+    <tabs>standard-UsageBillingPeriodItem</tabs>
+    <tabs>standard-UsageEntitlementAccount</tabs>
+    <tabs>standard-UsageEntitlementBucket</tabs>
+    <tabs>standard-UsageEntitlementEntry</tabs>
+    <tabs>standard-UsageRatableSummary</tabs>
+    <tabs>standard-UsageSummary</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>UsageManagement_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>standard-TransactionUsageEntitlement</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageBillingPeriodItem</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageEntitlementAccount</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageEntitlementBucket</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageEntitlementEntry</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageRatableSummary</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-UsageSummary</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-home</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

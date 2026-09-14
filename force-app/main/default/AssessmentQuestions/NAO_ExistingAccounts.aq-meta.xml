@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataType>Checkbox</dataType>
+    <developerName>NAO_ExistingAccounts</developerName>
+    <name>Do you already maintain any accounts with our bank?</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

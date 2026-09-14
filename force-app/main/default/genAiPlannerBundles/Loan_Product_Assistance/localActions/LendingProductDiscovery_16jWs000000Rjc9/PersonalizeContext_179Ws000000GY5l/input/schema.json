@@ -1,0 +1,36 @@
+{
+  "required" : [ "sourceId", "individualId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "sourceId" : {
+      "title" : "Source ID",
+      "description" : "Identifier for the agent calling the action.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "individualId" : {
+      "title" : "Individual ID",
+      "description" : "The individual ID associated with a Data Cloud profile.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "individualKeyQualifier" : {
+      "title" : "Individual Key Qualifier",
+      "description" : "The key that uniquely identifies an individual when the same ID is present in multiple data sources.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "subjectId" : {
+      "title" : "Subject ID",
+      "description" : "The ID of the topic that's used by the personalization context action to determine relevant profile data. This decision is based on the topics instructions and associated actions.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

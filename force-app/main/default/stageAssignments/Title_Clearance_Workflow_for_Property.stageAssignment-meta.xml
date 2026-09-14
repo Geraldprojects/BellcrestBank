@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageAssignment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <masterLabel>Information Verification Workflow for Property</masterLabel>
+    <referenceObject>InformationVerification</referenceObject>
+    <ruleCriteria>
+        <condition>
+            <fieldName>InformationVerification.Purpose</fieldName>
+            <operator>Equals</operator>
+            <sequenceNumber>1</sequenceNumber>
+            <value>Title Clearance</value>
+        </condition>
+        <criteriaType>AND</criteriaType>
+        <logicalExpression>1</logicalExpression>
+        <name>For title clearance</name>
+        <priority>1</priority>
+        <stageDefinition>Info_Verification_for_Property_Title_Clearance</stageDefinition>
+    </ruleCriteria>
+</StageAssignment>

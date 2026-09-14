@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Additional Email</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Email</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Email</dataType>
+    <developerName>FSC_DL_v1_Additional_Email</developerName>
+    <name>Additional Email</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

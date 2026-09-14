@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;AddressInformation&quot; : {
+    &quot;AddressBlock&quot; : {
+      &quot;Country&quot; : null,
+      &quot;City&quot; : null,
+      &quot;State&quot; : null,
+      &quot;EndDate&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;Address&quot; : null,
+      &quot;Zipcode&quot; : null
+    }
+  },
+  &quot;PersonalInformation&quot; : {
+    &quot;TaxpayerIdentificationType&quot; : null,
+    &quot;Nationality&quot; : null,
+    &quot;TaxpayerIdentificationNumber&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;PhoneType&quot; : null,
+    &quot;PhoneNumber&quot; : null,
+    &quot;DateOfBirth&quot; : null,
+    &quot;Suffix&quot; : null,
+    &quot;Prefix&quot; : null,
+    &quot;MiddleName&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;EmploymentInformation&quot; : {
+    &quot;EmploymentBlock&quot; : {
+      &quot;AnnualIncome&quot; : null,
+      &quot;NumHoursAWeek&quot; : null,
+      &quot;HourlyRate&quot; : null,
+      &quot;SalaryType&quot; : null,
+      &quot;JobTitle&quot; : null,
+      &quot;EmploymentEndDate&quot; : null,
+      &quot;EmploymentStartDate&quot; : null,
+      &quot;EmployerName&quot; : null,
+      &quot;EmploymentType&quot; : null
+    }
+  },
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DataRaptorPostAction1&quot; : null,
+    &quot;CreatePartyProfileAddress&quot; : null,
+    &quot;AddressInformation&quot; : null,
+    &quot;CreateApplicationRecords&quot; : null,
+    &quot;PersonalInformation&quot; : null,
+    &quot;CreatePersonEmployment&quot; : null,
+    &quot;EmploymentInformation&quot; : null,
+    &quot;View Offers&quot; : null,
+    &quot;Application Creation&quot; : null,
+    &quot;CallDigitalLendingApis&quot; : null,
+    &quot;Application Summary&quot; : null,
+    &quot;Automatic Payments&quot; : null,
+    &quot;Income Information&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;View Offers&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;Application Creation&quot; : { },
+  &quot;Application Summary&quot; : { },
+  &quot;Automatic Payments&quot; : {
+    &quot;AccountType&quot; : null,
+    &quot;AutoPayEnrollment&quot; : null,
+    &quot;SortCodeRoutingNumber&quot; : null,
+    &quot;AccountNumber&quot; : null
+  },
+  &quot;Income Information&quot; : {
+    &quot;Currency2&quot; : null,
+    &quot;OtherIncomeDescription1&quot; : null,
+    &quot;OtherIncomeDescription2&quot; : null,
+    &quot;Amount1&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DigitalLendingDFUpdateAppFormProductStage</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2758075a-1b4c-460a-9024-1d4a4f18ef3e</globalKey>
+        <inputFieldName>applicationFormProductStage</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFUpdateAppFormProductStage</name>
+        <omniDataTransformation>0kdjX00000007ti</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007ti</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Stage</outputFieldName>
+        <outputObjectName>ApplicationFormProduct</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>82f0fc1e-6e41-4aac-bb5c-08c91414c533</globalKey>
+        <inputFieldName>applicationFormProductId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFUpdateAppFormProductStage</name>
+        <omniDataTransformation>0kdjX00000007tj</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007tj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ApplicationFormProduct</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>eae994ff-212c-4120-b291-6687d921437f</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DigitalLendingDFUpdateAppFormProductStage</name>
+        <omniDataTransformation>0kdjX00000007tk</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007tk</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ApplicationFormProduct</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;AddressInformation&quot; : {
+    &quot;AddressBlock&quot; : {
+      &quot;Country&quot; : null,
+      &quot;City&quot; : null,
+      &quot;State&quot; : null,
+      &quot;EndDate&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;Address&quot; : null,
+      &quot;Zipcode&quot; : null
+    }
+  },
+  &quot;PersonalInformation&quot; : {
+    &quot;TaxpayerIdentificationType&quot; : null,
+    &quot;Nationality&quot; : null,
+    &quot;TaxpayerIdentificationNumber&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;PhoneType&quot; : null,
+    &quot;PhoneNumber&quot; : null,
+    &quot;DateOfBirth&quot; : null,
+    &quot;Suffix&quot; : null,
+    &quot;Prefix&quot; : null,
+    &quot;MiddleName&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;EmploymentInformation&quot; : {
+    &quot;EmploymentBlock&quot; : {
+      &quot;AnnualIncome&quot; : null,
+      &quot;NumHoursAWeek&quot; : null,
+      &quot;HourlyRate&quot; : null,
+      &quot;SalaryType&quot; : null,
+      &quot;JobTitle&quot; : null,
+      &quot;EmploymentEndDate&quot; : null,
+      &quot;EmploymentStartDate&quot; : null,
+      &quot;EmployerName&quot; : null,
+      &quot;EmploymentType&quot; : null
+    }
+  },
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DataRaptorPostAction1&quot; : null,
+    &quot;CreatePartyProfileAddress&quot; : null,
+    &quot;AddressInformation&quot; : null,
+    &quot;CreateApplicationRecords&quot; : null,
+    &quot;PersonalInformation&quot; : null,
+    &quot;CreatePersonEmployment&quot; : null,
+    &quot;EmploymentInformation&quot; : null,
+    &quot;View Offers&quot; : null,
+    &quot;Application Creation&quot; : null,
+    &quot;CallDigitalLendingApis&quot; : null,
+    &quot;Application Summary&quot; : null,
+    &quot;Automatic Payments&quot; : null,
+    &quot;Income Information&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;View Offers&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;Application Creation&quot; : { },
+  &quot;Application Summary&quot; : { },
+  &quot;Automatic Payments&quot; : {
+    &quot;AccountType&quot; : null,
+    &quot;AutoPayEnrollment&quot; : null,
+    &quot;SortCodeRoutingNumber&quot; : null,
+    &quot;AccountNumber&quot; : null
+  },
+  &quot;Income Information&quot; : {
+    &quot;Currency2&quot; : null,
+    &quot;OtherIncomeDescription1&quot; : null,
+    &quot;OtherIncomeDescription2&quot; : null,
+    &quot;Amount1&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DigitalLendingDFUpdateAppFormProductStage_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Property Unit Identifier</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Property Unit Identifier</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Text</dataType>
+    <developerName>FSC_DL_v1_Property_Unit_Identifier</developerName>
+    <name>Property Unit Identifier</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

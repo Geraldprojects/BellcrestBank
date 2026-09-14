@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IdentificationNumber</fullName>
+    <inlineHelpText>Specifies a unique identifier for the item, such as the serial number or a vehicle identification number.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

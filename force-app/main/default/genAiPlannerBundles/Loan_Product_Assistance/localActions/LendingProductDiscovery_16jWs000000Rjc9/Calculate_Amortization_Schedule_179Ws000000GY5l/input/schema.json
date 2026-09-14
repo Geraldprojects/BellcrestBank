@@ -1,0 +1,17 @@
+{
+  "required" : [ "Input:Account" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Account" : {
+      "title" : "objectToSummarize",
+      "description" : "Calculate Amortization Schedule",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Account"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

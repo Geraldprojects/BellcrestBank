@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DigitalLendingCreateApplicationFormSellerItem&quot; : null,
+    &quot;DigitalLendingExtractAdditionalProductInformation&quot; : null,
+    &quot;AdditionalProductInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;AdditionalProductInformation&quot; : {
+    &quot;Price&quot; : null,
+    &quot;Mileage&quot; : null,
+    &quot;Year&quot; : null,
+    &quot;Make&quot; : null,
+    &quot;Model&quot; : null,
+    &quot;VinNumber&quot; : null,
+    &quot;AssetType&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>617f58f3-e867-4dd5-9721-38e8e6d008bc</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_VehicleIdentificationNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j2</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j2</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>VehicleIdentificationNumber</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>fb73c5cf-d21e-45c5-94e7-240be69509eb</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_v1_Mileage</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007ir</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007ir</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Mileage</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6eb77e1f-0354-4847-b1ff-3697e46a6299</globalKey>
+        <inputFieldName>AdditionalProductInformation:PropertyDetailsSection:FSC_DL_v1_Built_Up_Area</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j3</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BuiltUpArea</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>96f74b09-95b7-4014-83fa-0cbd74f6d7cd</globalKey>
+        <inputFieldName>AdditionalProductInformation:PropertyDetailsSection:FSC_DL_v1_Construction_Stage</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j0</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j0</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ConstructionStage</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>69f1cd00-b969-4ddd-8fc3-c1f2657eefc9</globalKey>
+        <inputFieldName>AdditionalProductInformation:PropertyDetailsSection:FSC_DL_v1_Property_Price</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j1</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Price</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>646704ee-391d-4eeb-bcdc-4029636581e0</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_v1_Price</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007iu</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007iu</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Price</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ac796537-e343-4300-a3d2-688796815f15</globalKey>
+        <inputFieldName>AdditionalProductInformation:PropertyDetailsSection:FSC_DL_v1_Property_Unit_Identifier</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j6</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j6</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PropertyUnitIdentifier</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b7c1f18a-b29b-4c2b-9d5c-53d4d13fae02</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_v1_Make</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007iv</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007iv</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Make</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>68548834-2796-4442-adff-f63c02389f7a</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_v1_Model</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007is</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007is</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Model</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>65da7947-3c5f-432f-a4b1-f30b1eeb21fd</globalKey>
+        <inputFieldName>AdditionalProductInformation:FSC_DL_AssetType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j4</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j4</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c10ae23e-cdcb-403d-bb57-c806f5dbab46</globalKey>
+        <inputFieldName>applicationFormProductId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007it</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007it</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationFormProductId</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>68d88cb1-a1ae-4c9c-912e-c551651adeb4</globalKey>
+        <inputFieldName>PartyFinancialAssetId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007j5</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007j5</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PartyFinancialAssetId</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9b807673-c16a-4650-acce-7488f0c244ad</globalKey>
+        <inputFieldName>AdditionalProductInformation:PropertyDetailsSection:FSC_DL_v1_Built_Up_Area_Unit</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007iy</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007iy</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BuiltUpAreaUnit</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>03525733-65a0-4ffc-a670-ea8675324469</globalKey>
+        <inputFieldName>ApplicationFormSellerItemId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007iz</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007iz</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>0ac3c519-6422-436f-906c-4c9657d59614</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007iw</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007iw</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>cfd1e93b-f3ce-4a7c-80e1-450567e06e9f</globalKey>
+        <inputFieldName>AdditionalProductInformation:VehicleDetailsSection:FSC_DL_v1_Year</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DigitalLendingDFCreateApplicationFormSellerItem</name>
+        <omniDataTransformation>0kdjX00000007ix</omniDataTransformation>
+        <omniDataTransformationId>0kdjX00000007ix</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Year</outputFieldName>
+        <outputObjectName>ApplicationFormSellerItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{ }</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DigitalLendingDFCreateApplicationFormSellerItem_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

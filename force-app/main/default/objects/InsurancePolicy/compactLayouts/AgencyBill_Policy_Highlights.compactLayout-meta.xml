@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AgencyBill_Policy_Highlights</fullName>
+    <fields>Name</fields>
+    <fields>BillingCarrierAccountId</fields>
+    <fields>EffectiveFromDate</fields>
+    <fields>EffectiveToDate</fields>
+    <fields>BillingType</fields>
+    <fields>StandardPremiumAmount</fields>
+    <fields>TermPremiumAmount</fields>
+    <fields>StandardTaxAmount</fields>
+    <fields>TermTaxAmount</fields>
+    <label>AgencyBill Policy Highlights</label>
+</CompactLayout>

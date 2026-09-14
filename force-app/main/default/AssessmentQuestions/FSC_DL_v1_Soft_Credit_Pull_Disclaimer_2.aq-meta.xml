@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Soft Credit Pull Disclaimer 2</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>&lt;b&gt;Checking your rate will not affect your credit score.&lt;/b&gt;</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>TextBlock</dataType>
+    <developerName>FSC_DL_v1_Soft_Credit_Pull_Disclaimer_2</developerName>
+    <name>Soft Credit Pull Disclaimer 2</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

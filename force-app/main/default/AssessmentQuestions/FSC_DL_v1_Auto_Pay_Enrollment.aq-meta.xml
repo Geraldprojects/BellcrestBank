@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>AutoPayEnrollment</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Opt In to Auto Payment</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Checkbox</dataType>
+    <developerName>FSC_DL_v1_Auto_Pay_Enrollment</developerName>
+    <name>AutoPayEnrollment</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

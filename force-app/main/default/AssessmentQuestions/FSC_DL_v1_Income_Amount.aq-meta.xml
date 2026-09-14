@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Income Amount</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Income Amount</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Currency</dataType>
+    <developerName>FSC_DL_v1_Income_Amount</developerName>
+    <name>Income Amount</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

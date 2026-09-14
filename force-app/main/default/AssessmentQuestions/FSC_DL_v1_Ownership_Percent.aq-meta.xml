@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Ownership Percent</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Ownership Percent</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Decimal</dataType>
+    <developerName>FSC_DL_v1_Ownership_Percent</developerName>
+    <name>Ownership Percent</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

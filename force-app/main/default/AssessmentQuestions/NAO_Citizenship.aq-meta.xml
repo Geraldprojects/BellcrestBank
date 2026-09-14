@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataType>RadioGroup</dataType>
+    <developerName>NAO_Citizenship</developerName>
+    <name>What is your citizenship or residency status?</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageAssignment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>Collateral Management Workflow Assignment for Party Financial Asset</description>
+    <masterLabel>Collateral Management Workflow Assignment</masterLabel>
+    <referenceObject>PartyFinancialAsset</referenceObject>
+    <ruleCriteria>
+        <condition>
+            <fieldName>PartyFinancialAsset.Type</fieldName>
+            <operator>Equals</operator>
+            <sequenceNumber>1</sequenceNumber>
+            <value>Certificate of Deposit</value>
+        </condition>
+        <criteriaType>AND</criteriaType>
+        <logicalExpression>1</logicalExpression>
+        <name>Workflow for certificate of deposit</name>
+        <priority>1</priority>
+        <stageDefinition>Party_Financial_Asset_Workflow_Certificate_of_Deposit</stageDefinition>
+    </ruleCriteria>
+    <stageDefinition>Party_Financial_Asset_Workflow</stageDefinition>
+</StageAssignment>

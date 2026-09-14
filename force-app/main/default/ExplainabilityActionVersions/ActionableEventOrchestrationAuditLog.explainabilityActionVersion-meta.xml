@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExplainabilityActionVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionSpecification>{}</actionSpecification>
+    <active>true</active>
+    <definitionVersion>1</definitionVersion>
+    <description>Actionable Event Orchestration Audit Trail Log Definition Initial Version</description>
+    <explainabilityActionDef>ActionableEventOrchAuditLog</explainabilityActionDef>
+    <masterLabel>ActionableEventOrchestrationAuditLog</masterLabel>
+</ExplainabilityActionVersion>

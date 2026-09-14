@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <masterLabel>Party Financial Asset Workflow - Certificate of Deposit</masterLabel>
+    <referenceObject>PartyFinancialAsset</referenceObject>
+    <referenceObjectField>Status</referenceObjectField>
+    <stageTransition>
+        <fromStageValue>Declaration</fromStageValue>
+        <stepGroup>
+            <name>Declaration-Appraisal</name>
+            <step>
+                <apiName>Initial_Valuation</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Checking of Deposit Balance</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <toStageValue>Appraisal</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Appraisal</fromStageValue>
+        <toStageValue>Due Diligence</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Due Diligence</fromStageValue>
+        <toStageValue>Lien Registration</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Due Diligence</fromStageValue>
+        <toStageValue>Verified</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Lien Registration</fromStageValue>
+        <toStageValue>Due Diligence</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Lien Registration</fromStageValue>
+        <toStageValue>Collateralized</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Lien Registration</fromStageValue>
+        <toStageValue>Cross-Collateralized</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Verified</fromStageValue>
+        <toStageValue>Collateralized</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Verified</fromStageValue>
+        <toStageValue>Cross-Collateralized</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Verified</fromStageValue>
+        <toStageValue>Due Diligence</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Verified</fromStageValue>
+        <stepGroup>
+            <name>Verified-Appraisal</name>
+            <step>
+                <apiName>Revaluation</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Revaluation</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <toStageValue>Appraisal</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Collateralized</fromStageValue>
+        <toStageValue>Cross-Collateralized</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Collateralized</fromStageValue>
+        <stepGroup>
+            <name>Collateralized-Appraisal</name>
+            <step>
+                <apiName>Revaluation</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Revaluation</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Adjustment_based_on_Field_Visit</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Revaluation</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Adjustment based on Field Visit</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <toStageValue>Appraisal</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Collateralized</fromStageValue>
+        <toStageValue>Due Diligence</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Collateralized</fromStageValue>
+        <toStageValue>Lien Registration</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Cross-Collateralized</fromStageValue>
+        <stepGroup>
+            <name>Cross-Collateralized-Appraisal</name>
+            <step>
+                <apiName>Revaluation_from_cross_coll</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Revaluation</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <toStageValue>Appraisal</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Cross-Collateralized</fromStageValue>
+        <toStageValue>Due Diligence</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>Cross-Collateralized</fromStageValue>
+        <toStageValue>Lien Registration</toStageValue>
+    </stageTransition>
+    <stageValue>
+        <stepGroup>
+            <name>Due Diligence</name>
+            <step>
+                <apiName>Lien_Search</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Lien Search</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Document_Verification</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Document Verification</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Due Diligence</value>
+    </stageValue>
+    <stageValue>
+        <value>Appraisal</value>
+    </stageValue>
+    <stageValue>
+        <value>Declaration</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>Cross-Collateralized</name>
+            <step>
+                <apiName>Lien_Order_and_Covenants_Document_Signatures</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Lien Order and Covenants Document &amp; Signatures</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Cross-Collateralized</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>Collateralized</name>
+            <step>
+                <apiName>Covenant_Capture_Signatures</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Covenant Capture &amp; Signatures</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Collateralized</value>
+    </stageValue>
+    <stageValue>
+        <value>Verified</value>
+    </stageValue>
+    <stageValue>
+        <stepGroup>
+            <name>Lien Registration</name>
+            <step>
+                <apiName>Lien_Establishment</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Lien Establishment</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Lien_Perfection_Check</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Lien_Establishment</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Lien Perfection Check</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <value>Lien Registration</value>
+    </stageValue>
+</StageDefinition>

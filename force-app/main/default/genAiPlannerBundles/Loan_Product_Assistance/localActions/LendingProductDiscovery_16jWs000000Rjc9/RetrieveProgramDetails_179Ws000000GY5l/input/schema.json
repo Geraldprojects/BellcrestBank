@@ -1,0 +1,15 @@
+{
+  "required" : [ "programId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "programId" : {
+      "title" : "programId",
+      "description" : "The input program Id, used to retrieve the product details.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

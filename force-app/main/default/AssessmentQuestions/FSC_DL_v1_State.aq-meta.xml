@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>State</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>State</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Text</dataType>
+    <developerName>FSC_DL_v1_State</developerName>
+    <name>State</name>
+    <questionCategory>Demographic</questionCategory>
+</AssessmentQuestion>

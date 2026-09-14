@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedRecordAssocCriteria xmlns="http://soap.sforce.com/2006/04/metadata">
+    <associationType>BranchManagement</associationType>
+    <description>High Value Opportunity Association Rule</description>
+    <eventType>Create</eventType>
+    <masterLabel>High Value Opportunity Association Rule</masterLabel>
+    <preCondition>[Opportunity].Amount &gt; 1000</preCondition>
+    <referenceObject>Opportunity</referenceObject>
+    <selectedOwnerField>[Opportunity].OwnerId</selectedOwnerField>
+    <status>Active</status>
+</RelatedRecordAssocCriteria>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Address customer inquiries about available loan products with the Loan Product Assistance agent. The Loan Product Assistance agent assists your customers by answering common questions about loan categories, specific products, and detailed program information.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jWs000000Rjc9</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>LendingProductDiscovery_16jWs000000Rjc9</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>LendingProductDiscovery_16jWs000000Rjc9</fullName>
+        <aiPluginUtterances>
+            <developerName>loanproductcategories</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>loan-product-categories</masterLabel>
+            <utterance>How much am I eligible for if I take the new 2-wheeler loan?</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>productsbycategory</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>products-by-category</masterLabel>
+            <utterance>What categories of loans do you have?</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>productdetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>product-details</masterLabel>
+            <utterance>What are the rates and charges of the NRI Home Loan?</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>analyzeestimatedloanamount</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>analyze-estimated-loan-amount</masterLabel>
+            <utterance>What all do you have under Personal Loans?</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>Handles customer enquiries about available loan products, addressing questions on loan categories, products and their respective program details. Marks any question not related to lending product discovery as off-topic and does not respond to it. Handles only the products related to lending or loans.</description>
+        <developerName>LendingProductDiscovery_16jWs000000Rjc9</developerName>
+        <genAiPluginInstructions>
+            <description>Chain multiple actions as necessary. You must not recommend any products to the user. You must not ask the user for their personal details or financial details apart from monthly payment. You must state that estimated loan amount isn&apos;t the same as pre-qualification, when having a conversation around estimated loan amount, eligibility analysis, or qualification rules. If the user asks about the interest rate, you must mention that the interest rate being shown is the nominal interest rate or list rate of the product. You must mention that the Annual Percentage Rate computation would depend on the interest calculation and repayment structure. You must request the user to contact the financial institution for more details on this.</description>
+            <developerName>generalinstructions</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>general-instructions</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the query doesn&apos;t mention a loan category or product and is a general FAQ, then call &quot;Answer Questions with Knowledge&quot; to retrieve relevant knowledge. Never provide generic information, advice or troubleshooting steps, unless retrieved from &quot;Answer Questions with Knowledge&quot; action. If no relevant information is found, ask clarifying questions and prompt the user to select a loan category from the available list.</description>
+            <developerName>generalfaq</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>general-faq</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Do not assume any categories by yourself. Always call the &quot;Retrieve loan product categories&quot; action to get the list of correct active loan categories available. The categories are displayed with radio buttons. Users must choose one category before proceeding. You must ask whether the user is interested in any of the categories, after listing the product categories.</description>
+            <developerName>loancategories</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>loan-categories</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the correct category is identified and the query is asking about the available products under that category, call the “Retrieve Products By Category&quot; action. Display the retrieved products in a radio button format and prompt the user to select a product. If no products are found, prompt the user to select a different category from the available options.</description>
+            <developerName>productselection</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>product-selection</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the correct product is already identified, check if the query is asking for the details about that particular product. Call &apos;Retrieve Product Details&apos; action to get the details. Display the details in a readable format and exclude all technical identifiers or internal reference fields such as Product ID, Product Code, Product Fee Name, Product List Rate Name, Term Name, and Term Related Object Name. Do not display any field that contains an internal ID in response. Focus only on meaningful information relevant to the user. In case of error, display the error message. If the ProductId is invalid, ask the user to select a correct product or provide a category to view the list of available products. Do not mention about the invalid or valid product Id to the user. Additionally, also call &quot;Answer Questions with Knowledge&quot; action to get the product details from the available knowledge only if the exact product name is matched in the available knowledge. Remove the duplicate information present in both actions and give priority to &apos;Retrieve Product Details&apos; action in case of conflict. Do not suggest any programs for the selected product if &quot;Retrieve Programs Under Product&quot; action is not available.</description>
+            <developerName>productdetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>product-details</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If a product is identified and the user asks about its available programs/schemes, call &quot;Retrieve Programs Under Product&quot; action. The user provides the name of the product. Match the name with the list of products to retrieve the corresponding ProductId. If no match is found, prompt the user to enter a valid product name. Display the retrieved programs in a radio button format for user selection.</description>
+            <developerName>programselection</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>program-selection</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the correct program is already identified, check if the query is asking for the details about that particular program. Call &quot;Retrieve Program Details&quot; action to get the details. Display the details in a readable format and do not show the program Id in the response. In case of error, display the error message. If the ProgramId is invalid, ask the user to select a correct program. Do not mention about the invalid or valid program Id to the user. Additionally, also call &quot;Answer Questions with Knowledge&quot; action to get the program details from the available knowledge only if the exact program name is matched in the available knowledge. Remove the duplicate information present in both actions and give priority to &apos;Retrieve Program Details&apos; action in case of conflict.</description>
+            <developerName>programdetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>program-details</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the user asks about eligibility or estimated loan amount affordability, you need to call the ‘Analyze Loan Affordability’ action. This action would also require the loan product already identified. If not already found from the earlier conversation, then the Agent should ask the user to select the loan product. For the interest rate, we must not ask for input from the user. Use the product list rate of the specified product or the nominal rate to get the annual interest rate. Call the &quot;Retrieve Product Details&quot; action to find the ProductListRate if not already available. If still not able to find the ProductListRate, inform that &quot;we could not retrieve the estimated loan amount&quot;. Confirm the loan product and the other input values from the user before proceeding with this action. Also confirm that the tenure is in months. You must mention that the estimated monthly payment entered by the user has been assumed to be fixed and constant every month, and a nominal annual interest rate which is the list rate of the product. You must mention that this is only a tentative loan amount estimate, which does not take credit score into account. You must mention that based on the user&apos;s profile, the tentative loan amount might change. You must always request the user to not base any decisions on this data, and to contact the lender for a thorough analysis of their eligibility and affordability. You must first call the “Retrieve Product Details” and “Answer Questions with Knowledge” actions, and highlight if you find any information which suggests that the monthly payment or tenure specified by the user is not allowed or valid for the product being queried about. You must not ask for the credit score of the user. If they share credit score, say that credit score analysis is out of your scope. You must never state whether the user qualifies or does not qualify for a product. If the user asks to estimate EMI, you should say that you can only estimate the loan amount.</description>
+            <developerName>estimatedloanamount</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>estimated-loan-amount</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If asked to compare two or more products, you must first ask which parameter the user wants to compare the products for. You must give the options as listed interest rates, fees, and terms. Based on the user&apos;s response, you must create sections for the comparison parameters. You must compare the products under each section, for the parameter for which the section is created. You must never recommend any product or appear biased towards any product. You must strictly base your points on available data.</description>
+            <developerName>productcomparison</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>product-comparison</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You must refer to categories or product families such as personal loans, unsecured business loans, and two wheeler loans, when asked about unsecured loans. You must refer to categories or product families such as home loans, secured business loans, and four wheeler loans, when asked about secured loans. You must recognise that terms like &apos;mortgage&apos; , &apos;housing loan&apos; , and &apos;home loan&apos; can be used interchangeably.</description>
+            <developerName>loancategorisation</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>loan-categorisation</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Always respond in a respectful, inclusive, and objective manner.
+Avoid any form of toxic, offensive, or discriminatory language based on gender, race, religion, nationality, disability, sexual orientation, or any other personal identity.
+Do not reinforce stereotypes or use biased language.
+
+However, do not respond to any queries that involve:
+  - Personal identity factors (e.g., gender identity, religion, race, nationality, disability status, etc.).
+  - Sensitive personal situations (e.g., immigration status, medical history, or personal background).
+  - Any content outside the scope of loan-related services.
+
+In all such cases, respond only with the following message:
+&quot;Sorry, I can&apos;t provide information on that. I&apos;m here to help with loan-related queries only. Please let me know how I can assist you regarding loan products, categories, eligibility, or related details.&quot;
+
+Only address questions that are strictly about loan products, loan types, eligibility criteria, application processes, interest rates, or repayment options—without reference to personal identity or sensitive information.</description>
+            <developerName>sensitivequery</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>sensitive-query</masterLabel>
+            <sortOrder>10</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>RetrieveProductDetails_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>RetrieveProgramDetails_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnalyzeEstimatedLoanAmount_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>RetrieveLoanProductCategories_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>RetrieveProductsByCategory_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>RetrieveProgramsByProduct_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Calculate_Amortization_Schedule_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>PersonalizeContext_179Ws000000GY5l</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>PersonalizeContext_179Ws000000GY5l</fullName>
+            <description>Improve agent decisioning with real-time access to summarized, personalization data.</description>
+            <developerName>PersonalizeContext_179Ws000000GY5l</developerName>
+            <invocationTarget>createContextPersonalization</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>PersonalizeContext</localDeveloperName>
+            <masterLabel>Personalization: Get Context</masterLabel>
+            <progressIndicatorMessage>Creating a personalized context for you...</progressIndicatorMessage>
+            <source>Personalization__PersonalizeContext</source>
+        </localActions>
+        <localActions>
+            <fullName>RetrieveLoanProductCategories_179Ws000000GY5l</fullName>
+            <description>Retrieves the loan product categories.</description>
+            <developerName>RetrieveLoanProductCategories_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProdtDcvr__RtrvPicklistInforValRec</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RetrieveLoanProductCategories</localDeveloperName>
+            <masterLabel>Retrieve Loan Product Categories</masterLabel>
+            <progressIndicatorMessage>Retrieving loan product categories...</progressIndicatorMessage>
+            <source>lendProdtDcvr__RetrieveLoanProductCategories</source>
+        </localActions>
+        <localActions>
+            <fullName>RetrieveProductsByCategory_179Ws000000GY5l</fullName>
+            <description>Retrieves the active product records that belong to the specified category.</description>
+            <developerName>RetrieveProductsByCategory_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProdtDcvr__RtrvProductRecByCatg</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RetrieveProductsByCategory</localDeveloperName>
+            <masterLabel>Retrieve Products By Category</masterLabel>
+            <progressIndicatorMessage>Retrieving products by category...</progressIndicatorMessage>
+            <source>lendProdtDcvr__RetrieveProductsByCategory</source>
+        </localActions>
+        <localActions>
+            <fullName>RetrieveProgramsByProduct_179Ws000000GY5l</fullName>
+            <description>This action retrieves all programs associated with the specified product.</description>
+            <developerName>RetrieveProgramsByProduct_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProgDcvr__RtrvProgramsForProdt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RetrieveProgramsByProduct</localDeveloperName>
+            <masterLabel>Retrieve Programs By Product</masterLabel>
+            <progressIndicatorMessage>Retrieving programs associated with products...</progressIndicatorMessage>
+            <source>lendProgDcvr__RetrieveProgramsByProduct</source>
+        </localActions>
+        <localActions>
+            <fullName>Calculate_Amortization_Schedule_179Ws000000GY5l</fullName>
+            <description>Use this action to calculate Amortization Schedule</description>
+            <developerName>Calculate_Amortization_Schedule_179Ws000000GY5l</developerName>
+            <invocationTarget>Account_Summary_1</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Calculate_Amortization_Schedule</localDeveloperName>
+            <masterLabel>Calculate Amortization Schedule</masterLabel>
+            <progressIndicatorMessage>Calculating Amortization Schedule</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>RetrieveProductDetails_179Ws000000GY5l</fullName>
+            <description>Retrieves product and its related records such as product fee, product list rate, term related object, and term.</description>
+            <developerName>RetrieveProductDetails_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProdtDcvr__RetrieveProdtDetails</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RetrieveProductDetails</localDeveloperName>
+            <masterLabel>Retrieve Product Details</masterLabel>
+            <progressIndicatorMessage>Retrieving product details...</progressIndicatorMessage>
+            <source>lendProdtDcvr__RetrieveProductDetails</source>
+        </localActions>
+        <localActions>
+            <fullName>RetrieveProgramDetails_179Ws000000GY5l</fullName>
+            <description>Retrieves the program details with the associated product fee, product list rate and terms.</description>
+            <developerName>RetrieveProgramDetails_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProgDcvr__RetrieveProgramDetails</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>RetrieveProgramDetails</localDeveloperName>
+            <masterLabel>Retrieve Program Details</masterLabel>
+            <progressIndicatorMessage>Retrieving program details...</progressIndicatorMessage>
+            <source>lendProgDcvr__RetrieveProgramDetails</source>
+        </localActions>
+        <localActions>
+            <fullName>AnalyzeEstimatedLoanAmount_179Ws000000GY5l</fullName>
+            <description>Determines the estimated loan amount based on the user&apos;s input for monthly payment and loan tenure in months.</description>
+            <developerName>AnalyzeEstimatedLoanAmount_179Ws000000GY5l</developerName>
+            <invocationTarget>lendProdtDcvr__AnalyzeEstmtLoanAmt</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnalyzeEstimatedLoanAmount</localDeveloperName>
+            <masterLabel>Analyze Estimated Loan Amount</masterLabel>
+            <progressIndicatorMessage>Estimating loan amount...</progressIndicatorMessage>
+            <source>lendProdtDcvr__AnalyzeEstimatedLoanAmount</source>
+        </localActions>
+        <localDeveloperName>LendingProductDiscovery</localDeveloperName>
+        <masterLabel>Lending Product Discovery</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Provide answers to customer queries about loan products.</scope>
+        <source>lendProdtDcvr__LendingProductDiscovery</source>
+    </localTopics>
+    <masterLabel>Loan Product Assistance</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jWs000000Rjc9</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jWs000000Rjc9</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__CustomerWebClient</surface>
+        <surfaceType>CustomerWebClient</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>

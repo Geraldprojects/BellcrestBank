@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BillingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <billingContextDefinition>BillingContext__stdctx</billingContextDefinition>
+    <billingContextSourceMapping>OrderEntitiesMapping</billingContextSourceMapping>
+    <billingIntraCtxtSrcMapping>BSGEntitiesMapping</billingIntraCtxtSrcMapping>
+    <defaultAPClosureDPEDefnName>LegalEntityAccountingPeriodClosure</defaultAPClosureDPEDefnName>
+    <defaultBillingTreatment>1BTjX000000026fWAA</defaultBillingTreatment>
+    <defaultEmailTemplate>00XjX0000003F5oUAE</defaultEmailTemplate>
+    <defaultInvPreviewTemplate>2dtjX0000000Bd1QAE</defaultInvPreviewTemplate>
+    <defaultInvoiceDocTemplate>2dtjX0000000BczQAE</defaultInvoiceDocTemplate>
+    <defaultLeapSumDPEDefnName>CreateGLAccountingPeriodSummaryRecord</defaultLeapSumDPEDefnName>
+    <defaultLegalEntity>0fwjX000000029tQAA</defaultLegalEntity>
+    <defaultTaxTreatment>1ttjX0000001wQ9QAI</defaultTaxTreatment>
+    <enableAutomaticRefunds>false</enableAutomaticRefunds>
+    <enableBillingDisputeManagement>false</enableBillingDisputeManagement>
+    <enableBillingSetup>true</enableBillingSetup>
+    <enableConvertedCrMemoCrMemoLnAppln>true</enableConvertedCrMemoCrMemoLnAppln>
+    <enableCrMemoApplicationToPostedInvoices>false</enableCrMemoApplicationToPostedInvoices>
+    <enableDunningOrchestration>false</enableDunningOrchestration>
+    <enableEnhancedPaymentData>false</enableEnhancedPaymentData>
+    <enableFailedPaymentsRetry>false</enableFailedPaymentsRetry>
+    <enableForeignExchangeTrxnJrnlCreation>false</enableForeignExchangeTrxnJrnlCreation>
+    <enableInvoiceEmailDelivery>true</enableInvoiceEmailDelivery>
+    <enableInvoicePdfGeneration>true</enableInvoicePdfGeneration>
+    <enableMilestoneBillingForAmend>false</enableMilestoneBillingForAmend>
+    <enableNegInvoiceLnConversionToCrMemoLn>true</enableNegInvoiceLnConversionToCrMemoLn>
+    <enablePaymentApplicationToPostedInvoices>true</enablePaymentApplicationToPostedInvoices>
+    <enablePaymentSchedulesAndItemsCreation>true</enablePaymentSchedulesAndItemsCreation>
+    <enableTransactionJournalCreation>true</enableTransactionJournalCreation>
+    <enableTransactionsApplicationToInvoices>false</enableTransactionsApplicationToInvoices>
+    <enableTrxnAmountsStorageInCorpCurrency>false</enableTrxnAmountsStorageInCorpCurrency>
+    <ruleBasedCrAndPymtAppln>{&quot;first&quot;:&quot;Payments&quot;,&quot;rules&quot;:[&quot;EM&quot;,&quot;EA&quot;,&quot;OI&quot;,&quot;HI&quot;]}</ruleBasedCrAndPymtAppln>
+</BillingSettings>

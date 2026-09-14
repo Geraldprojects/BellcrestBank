@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>Additional number of hours a week</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Number of hours a week</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Integer</dataType>
+    <developerName>FSC_DL_v1_Additional_Number_Of_Hours_A_Week</developerName>
+    <name>Additional number of hours a week</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

@@ -1,0 +1,15 @@
+{
+  "required" : [ "Category" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "productCategory" : {
+      "title" : "category",
+      "description" : "The input category used to get product records.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

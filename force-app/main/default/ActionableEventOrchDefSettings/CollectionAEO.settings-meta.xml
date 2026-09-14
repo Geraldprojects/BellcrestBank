@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActionableEventOrchDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionableEventUsageType>5</actionableEventUsageType>
+    <apiName>CollectionAEO</apiName>
+    <contextDefinitionDeveloperName>CollectionPlanContextClone</contextDefinitionDeveloperName>
+    <contextMappingTitle>CollectionPlanContextMapping</contextMappingTitle>
+    <eventSubtypeApiName>CollectionSubtype</eventSubtypeApiName>
+    <eventTypeApiName>CollectionEventType</eventTypeApiName>
+    <executionProcedureAPIName>DetermineCollectionPlanSegment</executionProcedureAPIName>
+    <executionProcedureType>1</executionProcedureType>
+    <isActive>true</isActive>
+    <isTemplate>false</isTemplate>
+    <label>CollectionAEO</label>
+</ActionableEventOrchDef>

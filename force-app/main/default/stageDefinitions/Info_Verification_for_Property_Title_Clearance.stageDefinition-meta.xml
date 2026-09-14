@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>Information Verification workflow for Property Title Clearance</description>
+    <masterLabel>Info Verification for Property Title Clearance</masterLabel>
+    <referenceObject>InformationVerification</referenceObject>
+    <referenceObjectField>Stage</referenceObjectField>
+    <stageTransition>
+        <fromStageValue>New</fromStageValue>
+        <stepGroup>
+            <name>New-In progress</name>
+            <step>
+                <apiName>Liens_Check</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Liens Check</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Legal_Issues_Check</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Legal Issues Check</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Chain_of_Ownership_Check</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Chain of Ownership Check</name>
+                <stepType>ManualTask</stepType>
+            </step>
+            <step>
+                <apiName>Declare_Title_Clear</apiName>
+                <assignedToUser>wsmith.ashxgxhn73xn.pmxo6irsuzh7.8sqwq9cnnchq.pfrtym9fdkru@gmail.com</assignedToUser>
+                <dependency>
+                    <step>Liens_Check</step>
+                </dependency>
+                <dependency>
+                    <step>Legal_Issues_Check</step>
+                </dependency>
+                <dependency>
+                    <step>Chain_of_Ownership_Check</step>
+                </dependency>
+                <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+                <name>Declare Title Clear</name>
+                <stepType>ManualTask</stepType>
+            </step>
+        </stepGroup>
+        <toStageValue>In progress</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>In progress</fromStageValue>
+        <toStageValue>Approved</toStageValue>
+    </stageTransition>
+    <stageTransition>
+        <fromStageValue>In progress</fromStageValue>
+        <toStageValue>Rejected</toStageValue>
+    </stageTransition>
+    <stageValue>
+        <value>New</value>
+    </stageValue>
+    <stageValue>
+        <value>In progress</value>
+    </stageValue>
+    <stageValue>
+        <value>Approved</value>
+    </stageValue>
+    <stageValue>
+        <value>Rejected</value>
+    </stageValue>
+</StageDefinition>

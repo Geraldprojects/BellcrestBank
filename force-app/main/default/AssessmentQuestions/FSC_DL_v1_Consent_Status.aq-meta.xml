@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentQuestion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assessmentQuestionVersion>
+        <isActive>true</isActive>
+        <name>FSC_DL_ConsentStatus</name>
+        <optionSourceResponseValue>false</optionSourceResponseValue>
+        <questionText>Has the applicant confirmed their consent to the required disclosures?</questionText>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </assessmentQuestionVersion>
+    <dataType>Formula</dataType>
+    <developerName>FSC_DL_v1_Consent_Status</developerName>
+    <formulaResponseDataType>Boolean</formulaResponseDataType>
+    <name>Consent Status</name>
+    <questionCategory>Financial</questionCategory>
+</AssessmentQuestion>

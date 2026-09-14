@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Messaging Queue</name>
+    <queueMembers>
+        <users>
+            <user>gomolemo.mpyana_lphlzzy6rg0uupr@gmail.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Agent_Routing_Configuration</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>
