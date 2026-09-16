@@ -1,6 +1,11 @@
 /**
  * @author: Gomolemo
  * @description: Creates periodic statements for the financial accounts of every active household.
+ *
+ *               A chunk that fails is rolled back and its households are remembered rather than lost. When
+ *               the run finishes, the batch is started again for just those households, one per chunk so a
+ *               single bad household can't sink the rest, up to MAX_ATTEMPTS in total. Statement creation
+ *               upserts on its keys, so reprocessing a household is safe.
  * @date: 2026/09/11
  **/
 
@@ -64,7 +69,12 @@ public with sharing class StatementBatch implements Database.Batchable<SObject>,
             financialAccountIds.addAll(ids);
         }*/
 
+        // Catching the exception stops the platform rolling the chunk back, so undo its partial work here.
+        Savepoint savepoint = Database.setSavepoint();
         try {
+            if (Test.isRunningTest() && simulateFailure) {
+                throw new StatementBatchException('Simulated failure');
+            }
             List<Household_Statement__c> created = StatementHelper.createStatements(
                     StatementService.getFinancialAccountIdsByHousehold(householdIds), periodStart, periodEnd
             );
@@ -72,17 +82,42 @@ public with sharing class StatementBatch implements Database.Batchable<SObject>,
                     'Created ' + created.size() + ' statement(s) from ' + householdIds.size() + ' household(s)'
             ).addTag(LOG_TAG);
         } catch (Exception e) {
-            // A batch chunk that throws is retried and then abandoned, taking the reason with it.
-            Nebula.Logger.error('Statement creation failed for ' + householdIds.size() + ' household(s)', e)
-                    .addTag(LOG_TAG);
-            Nebula.Logger.saveLog();
-            throw e;
+            Database.rollback(savepoint);
+            for (PartyRelationshipGroup household : households) {
+                failedRelationshipGroupIds.add(household.Id);
+            }
+            Nebula.Logger.error(
+                    'Statement creation failed for ' + householdIds.size() + ' household(s) on attempt ' + attempt
+                            + ' of ' + MAX_ATTEMPTS, e
+            ).addTag(LOG_TAG);
         }
 
         Nebula.Logger.saveLog();
     }
 
     public void finish(Database.BatchableContext context) {
+        if (!failedRelationshipGroupIds.isEmpty()) {
+            if (attempt < MAX_ATTEMPTS) {
+                Nebula.Logger.warn(
+                        'Retrying ' + failedRelationshipGroupIds.size() + ' failed household(s), attempt '
+                                + (attempt + 1) + ' of ' + MAX_ATTEMPTS
+                ).addTag(LOG_TAG);
+                Nebula.Logger.saveLog();
+
+                // Documents wait for the final attempt, so drafts aren't queued once per retry.
+                Database.executeBatch(
+                        new StatementBatch(periodStart, periodEnd, failedRelationshipGroupIds, attempt + 1),
+                        RETRY_BATCH_SIZE
+                );
+                return;
+            }
+
+            Nebula.Logger.error(
+                    'Gave up on ' + failedRelationshipGroupIds.size() + ' household(s) after ' + MAX_ATTEMPTS
+                            + ' attempts: ' + failedRelationshipGroupIds
+            ).addTag(LOG_TAG);
+        }
+
         List<Id> statementIds = new List<Id>(new Map<Id, Household_Statement__c>(
                 new HouseholdStatementsSelector()
                         .selectByStatusAndPeriodEnd(new Set<String>{ 'Draft' }, periodEnd)
@@ -100,4 +135,6 @@ public with sharing class StatementBatch implements Database.Batchable<SObject>,
 
         Nebula.Logger.saveLog();
     }
+
+    public class StatementBatchException extends Exception {}
 }
