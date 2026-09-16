@@ -36,4 +36,18 @@ public inherited sharing class PartyRelationshipGroupsSelector extends fflib_SOb
                         .toSOQL()
         );
     }
+
+    /**
+     * The same active households, narrowed to the given groups. Used by the statement batch to retry
+     * the households whose chunk failed.
+     */
+    public Database.QueryLocator selectActiveHouseholdsLocatorById(Set<Id> ids) {
+        String householdType = HOUSEHOLD_TYPE;
+        String activeStatus = ACTIVE_STATUS;
+        return Database.getQueryLocator(
+                newQueryFactory()
+                        .setCondition('Id IN :ids AND Type = :householdType AND Status = :activeStatus')
+                        .toSOQL()
+        );
+    }
 }

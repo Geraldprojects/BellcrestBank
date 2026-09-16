@@ -123,6 +123,57 @@ private class StatementBatchTest {
     }
 
     @IsTest
+    static void aFailedChunkIsRolledBackAndItsHouseholdsKeptForRetry() {
+        // Given an active household whose chunk will fail
+        Account household = createHouseholdThatHoldsAnAccount('Batch Failure', '5070');
+        PartyRelationshipGroup relationshipGroup = StatementTestDataFactory.createRelationshipGroup(
+                household.Id, 'Failure Group', 'Household', 'Active'
+        );
+        StatementBatch.simulateFailure = true;
+        StatementBatch batch = new StatementBatch(PERIOD_START, PERIOD_END);
+
+        // When the chunk runs
+        Test.startTest();
+        batch.execute(null, [SELECT Id, AccountId FROM PartyRelationshipGroup WHERE Id = :relationshipGroup.Id]);
+        Test.stopTest();
+
+        // Then nothing is left half-written, and the household is remembered for the retry
+        Assert.areEqual(
+                0, [SELECT COUNT() FROM Household_Statement__c],
+                'A failed chunk should leave no statements behind'
+        );
+        Assert.isTrue(
+                batch.failedRelationshipGroupIds.contains(relationshipGroup.Id),
+                'The failed household should be kept for the retry'
+        );
+    }
+
+    @IsTest
+    static void aRetryOnlyProcessesTheHouseholdsThatFailed() {
+        // Given two active households, only one of which failed
+        Account failed = createHouseholdThatHoldsAnAccount('Batch Retry', '5080');
+        Account succeeded = createHouseholdThatHoldsAnAccount('Batch Done', '5090');
+        PartyRelationshipGroup failedGroup = StatementTestDataFactory.createRelationshipGroup(
+                failed.Id, 'Retry Group', 'Household', 'Active'
+        );
+        StatementTestDataFactory.createRelationshipGroup(succeeded.Id, 'Done Group', 'Household', 'Active');
+
+        Test.setMock(HttpCalloutMock.class, AdobeCalloutMock.jobCompletes());
+
+        // When the retry runs for the failed household
+        Test.startTest();
+        Database.executeBatch(
+                new StatementBatch(PERIOD_START, PERIOD_END, new Set<Id>{ failedGroup.Id }, 2), 1
+        );
+        Test.stopTest();
+
+        // Then only that household is reprocessed
+        List<Household_Statement__c> statements = [SELECT Household__c FROM Household_Statement__c];
+        Assert.areEqual(1, statements.size(), 'Only the failed household should be retried');
+        Assert.areEqual(failed.Id, statements[0].Household__c, 'It should be the failed household');
+    }
+
+    @IsTest
     static void anOrgWithNoActiveHouseholdsCreatesNothing() {
         // Given no relationship groups at all
         Test.setMock(HttpCalloutMock.class, AdobeCalloutMock.jobCompletes());

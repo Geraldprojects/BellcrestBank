@@ -4,20 +4,53 @@
  * @date: 2026/09/11
  **/
 
-public with sharing class StatementBatch implements Database.Batchable<SObject> {
+public with sharing class StatementBatch implements Database.Batchable<SObject>, Database.Stateful {
 
     private static final String LOG_TAG = 'Statement Batch';
+
+    @TestVisible
+    private static final Integer MAX_ATTEMPTS = 3;
+    private static final Integer RETRY_BATCH_SIZE = 1;
+
+    // Lets a test force a chunk to fail, since real failures are hard to arrange.
+    @TestVisible
+    private static Boolean simulateFailure = false;
 
     private Date periodStart;
     private Date periodEnd;
 
+    // Null on the first attempt, which means every active household.
+    private Set<Id> relationshipGroupIds;
+    private Integer attempt;
+
+    // Carried across chunks by Database.Stateful.
+    @TestVisible
+    private Set<Id> failedRelationshipGroupIds = new Set<Id>();
+
     public StatementBatch(Date periodStart, Date periodEnd) {
+        this(periodStart, periodEnd, null, 1);
+    }
+
+    @TestVisible
+    private StatementBatch(Date periodStart, Date periodEnd, Set<Id> relationshipGroupIds, Integer attempt) {
         this.periodStart = periodStart;
         this.periodEnd = periodEnd;
+        this.relationshipGroupIds = relationshipGroupIds;
+        this.attempt = attempt;
     }
 
     public Database.QueryLocator start(Database.BatchableContext context) {
-        return new PartyRelationshipGroupsSelector().selectActiveHouseholdsLocator();
+        PartyRelationshipGroupsSelector selector = new PartyRelationshipGroupsSelector();
+
+        // A retry only revisits the households that failed on the previous attempt.
+        if (isRetry()) {
+            return selector.selectActiveHouseholdsLocatorById(relationshipGroupIds);
+        }
+        return selector.selectActiveHouseholdsLocator();
+    }
+
+    private Boolean isRetry() {
+        return relationshipGroupIds != null;
     }
 
     public void execute(Database.BatchableContext context, List<PartyRelationshipGroup> households) {
